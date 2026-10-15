@@ -1,0 +1,674 @@
+
+Aaira Basit: Portfolio Homepage Brief
+Creative direction, UX, copy and motion specification
+Prepared for Aaira Basit · Version 1.0 · October 2026
+How to use this document
+This is the master blueprint for the homepage of Aaira’s portfolio. It is written so a UI designer can build it in Figma and a developer can build it in code without guessing. Sections 01 to 07 set the strategy and the visual system. Sections 08 to 10 define the page and every word on it. Sections 11 to 15 cover motion, components and handoff.
+Three rules apply throughout:
+• Anything in [square brackets] is a placeholder that needs a real fact from Aaira. Nothing in this document invents a client result, a number or a testimonial.
+• Copy marked DRAFT is written to be edited. Keep the tone, change the facts.
+• Decisions already locked: the hero title is Creative Director & Visual Designer; motion design is not claimed as a skill (AI-assisted reels and visuals sit under AI Creative Production); there is no CV or Resume button; the style is fun, mid-brutalist and corporate.
+01 · Project Vision
+Positioning
+Aaira is not a graphic designer with a portfolio. She is a creative lead who builds whole brands: identity, campaigns, print, social systems and the management that keeps them consistent. The site must make that obvious in five seconds.
+Positioning line: Creative Director & Visual Designer who builds brands people remember.
+Website goals
+1. Reposition. Move the perception from “designer who makes posts” to “creative lead who runs a brand’s visual world.”
+2. Prove range. Brand identity, campaigns, print, social, presentations and AI-assisted production should all be visible without a click.
+3. Convert. A founder, recruiter or agency reaches the contact section or opens the Portfolio PDF within one session.
+Audience
+• Founders and marketing heads hiring a creative lead, or a studio-level freelancer.
+• Recruiters and hiring managers searching for Creative Director, Creative Lead or Brand Designer roles.
+• Agencies and consultancies looking for a collaborator who can own a brand end to end.
+User psychology
+• First five seconds: confidence. An oversized name, a clear role and one line of promise.
+• Next ten seconds: proof. Full-screen work arrives before any explanation.
+• Then: trust. Structure, restraint and consistency signal a person who can manage brands, not just decorate them.
+• Always: memorability. Small surprises (a sticker, a cursor label, a marquee) make the site feel made by someone with taste and a sense of humour.
+Design philosophy
+Structured like a corporation, behaving like a studio. Strong grids and clear hierarchy carry the credibility. Brutalist weight and playful details carry the personality.
+What success looks like
+• Visitors reach the first project within one scroll.
+• The Manaaq mini-agency block is opened more often than any other interaction (track it).
+• Contact clicks and Portfolio PDF downloads are tracked as the two primary conversions.
+02 · Creative Direction
+Keywords
+• Bold: oversized type, thick lines, no timid gestures.
+• Confident: short sentences, no apologies, no “passionate about.”
+• Editorial: magazine pacing, one idea per screen, big images.
+• Strategic: every section earns its place, and work is framed by what it did for the brand.
+• Playful: surprises that reward curiosity, never clutter.
+• Corporate: grids, alignment, restraint and professional language.
+• Unexpected: one broken rule per screen.
+• Clean: generous space, few colours, no decoration for its own sake.
+The agency test
+A visitor should wonder: “Is this a person or a studio?” If a section feels like a Behance grid or a template, rework it.
+Voice
+First person, direct, specific. Verbs over adjectives.
+• Yes: “I build visual systems that help brands communicate with clarity.”
+• No: “I am a passionate designer who loves creating beautiful things.”
+Never
+Gradients, blobs, neon, glassmorphism, stock icons, skill bars, and any CV or Resume button. The portfolio is the resume.
+03 · Design Language
+Fun + mid-brutalist + corporate, as a recipe:
+• Corporate, about 50%: structure.
+• Mid-brutalist, about 30%: attitude.
+• Fun, about 20%: surprise.
+Corporate: what it contributes
+Professional typography, a structured 12-column grid, strong hierarchy, large white space, aligned edges and plain-language copy.
+Mid-brutalist: what it contributes
+Oversized type, 2px black borders, sharp corners, hard offset shadows, large flat colour blocks, visible grid lines, and the occasional broken-grid layout or unexpected image crop. “Mid” means we borrow the structure and weight of brutalism, not its roughness. Alignment stays intact and readability never suffers.
+Fun: what it contributes
+Hover animations, a custom cursor with labels, sticky elements, floating labels, a rotating sticker, a marquee and playful transitions. The fun lives in movement and microcopy, not in cartoon graphics, so the site never looks childish.
+The rule of one
+Each screen gets one loud move (a giant number, a sticker, an off-grid image) and the rest stays calm. If two things shout, one has to leave.
+Surface rules
+• Radius: 0 on cards, images and buttons. Circles are allowed only for stickers and the cursor.
+• Borders: 2px solid #111111 for emphasis, 1px at 12% black for grid lines.
+• Shadow: only the hard offset shadow, 6px 6px 0 #111111. No blurred shadows anywhere.
+• Dividers: full-bleed 2px lines between major sections.
+04 · Moodboard
+Review each site live before building. Borrow principles, never layouts. Build the board in Figma or Milanote with four to five screenshots per reference, plus Aaira’s own strongest work, so the board shows where her work already fits.
+• Instrument: confident editorial scale. Borrow the bold typographic pacing and big imagery.
+• Porto Rocha: quiet confidence. Borrow the restraint and the way brand systems are presented.
+• DIA Studio: borrow oversized typography and tight, decisive layouts.
+• Locomotive: borrow smooth scrolling and the sense of weight in transitions.
+• Studio Freight: borrow scroll-driven motion polish and performance discipline.
+• Made Thought: borrow how identity and systems work is presented as a whole.
+• Basic Agency: borrow the playful-but-professional tone and strong case framing.
+• Linear: borrow clarity, spacing discipline and crisp micro-interactions.
+• Notion: borrow friendliness and plain-language approachability.
+• Pentagram: borrow typographic rigour and the “work speaks first” presentation.
+05 · Colour System
+Core palette
+• Paper #F7F6F3: main background. A warm off-white.
+• Ink #111111: text, borders, hard shadows and dark sections.
+• Burnt Orange #C85A1E: the single accent. Used for stickers, key numbers, hover states and highlights.
+• Graphite #8E8E8E: captions, inactive states and decorative text.
+Supporting neutrals
+• White #FFFFFF: card surfaces.
+• Concrete #E6E3DC: alternate section backgrounds and tag fills.
+• Soft Ink #2A2A2A: hover state on black elements.
+• Orange Tint #F3D9C9: sticker fills and highlight backgrounds (optional, same hue as the accent).
+• Orange Deep #B84E15: button fills that carry white text, and link hover.
+Usage ratio
+Roughly 70% Paper, 20% Ink, 8% Concrete and White, 2% Orange. Orange is a spice, never a base.
+Accessibility
+Approximate contrast ratios against Paper. Verify every pair with a contrast checker before launch.
+• Ink on Paper: about 17:1. Passes everywhere.
+• Burnt Orange on Paper: about 3.9:1. Use for large text (24px and up) and graphics only, never body copy.
+• Graphite on Paper: about 3:1. Decorative or large text only. For small captions use #6B6B6B (about 4.9:1).
+• White on Orange Deep: about 5:1. Use this pair for filled buttons.
+States
+• Button hover: fill changes from Ink to Orange Deep, text stays white.
+• Card hover: lifts 8px and the hard shadow appears. Border stays Ink.
+• Link hover: underline grows from the left and the text turns Orange Deep.
+• Focus ring: 2px Orange Deep, 3px offset, on every interactive element.
+• Section rhythm: alternate Paper, Ink and Concrete so the page has a beat while scrolling. Expertise and Contact are the Ink sections.
+06 · Typography System
+Typefaces
+• Primary: Satoshi (free on Fontshare) or Neue Montreal (paid). Use one, not both.
+• Secondary: Instrument Serif, italic only, at most one word per heading and never more than once per screen.
+• Label font (optional): a mono such as IBM Plex Mono or JetBrains Mono for tiny labels and index numbers. This is a suggested addition that pushes the brutalist feel without changing the palette.
+Scale (desktop, then mobile)
+• Display XL (name in hero): clamp(72px, 14vw, 220px), line height 0.88, letter spacing -0.05em, weight 800 to 900, uppercase. Mobile: 72px.
+• H1 (section titles): 96px, line height 0.95, -0.04em, weight 700. Mobile: 48px.
+• H2 (expertise items): 72px, line height 1.0, -0.03em, weight 600. Mobile: 40px.
+• H3 (project titles): 56px, line height 1.0, -0.03em, weight 700. Mobile: 36px.
+• H4 (card titles): 28px, line height 1.15, -0.01em, weight 600. Mobile: 22px.
+• Body large: 22px, line height 1.5, weight 400. Mobile: 18px.
+• Body: 16px, line height 1.6, weight 400.
+• Label: 12px, +0.08em, uppercase, weight 500. Mobile: 11px.
+• Navigation: 15px, +0.01em, weight 500.
+• Button: 14px, +0.06em, uppercase, weight 600.
+• Index numbers (01, 02, 03): 120 to 200px, transparent fill with a 2px Ink outline.
+Rules
+• Paragraph line length: 62 characters at most.
+• No centred paragraphs. Headings may be centred only in the Contact section.
+• Hyphenation off.
+• Project titles are always sentence-case or uppercase, never mixed.
+• The Instrument Serif italic moment is reserved for one emotional word, for example: Building brands people remember.
+07 · Grid and Spacing
+Grid
+• Desktop, 1440 and up: container max width 1440 (full-bleed imagery allowed), 12 columns, 40px margins, 24px gutters.
+• Laptop, 1024 to 1439: 12 columns, 32px margins, 20px gutters.
+• Tablet, 768 to 1023: 8 columns, 24px margins, 16px gutters.
+• Mobile, under 768: 4 columns, 20px margins, 16px gutters. Design at 390px wide.
+Spacing scale
+4, 8, 16, 24, 40, 64, 96, 160, 240.
+• Section padding, top and bottom: 160px desktop, 96px tablet, 64px mobile.
+• Gap between heading and content: 64px desktop, 40px mobile.
+Visible grid
+Show the 12-column lines at 12% black opacity in the hero and the About section. Pressing the G key toggles a full grid overlay for every visitor. It is a small easter egg that tells design-literate visitors the structure is intentional.
+08 · Homepage Wireframe
+Section order, top to bottom:
+LOADER            first visit only, 1.8s
+NAVIGATION        fixed
+01 HERO           100vh, video loop background
+MARQUEE           expertise keywords, scrolling
+02 SELECTED WORK  three full-screen projects + Manaaq mini-agency
+03 EXPERTISE      Ink section, nine hover items
+04 ABOUT          Paper, two columns
+05 EXPERIENCE     timeline, each year expands
+06 CLIENTS        typography wall
+07 TESTIMONIALS   optional, real quotes only
+08 CONTACT        Ink, one sentence
+FOOTER
+Hero, desktop:
+┌────────────────────────────────────────────────────┐
+│ AAIRA.                  Work  Services  About  Contact │
+│                                                    │
+│              [ full-screen video loop ]            │
+│                                                    │
+│ CREATIVE DIRECTOR & VISUAL DESIGNER          ✺     │
+│ AAIRA BASIT                               sticker  │
+│ Building thoughtful brands, campaigns and          │
+│ visual systems that people remember.               │
+│ [ VIEW WORK ↓ ]                                    │
+└────────────────────────────────────────────────────┘
+09 · Section Specifications
+Every section below lists its purpose, UX goal, layout, copy, animation, interaction and mobile behaviour. Copy is final-draft quality but marked DRAFT where facts need Aaira’s confirmation.
+09.0 Loader and Navigation
+Loader
+• Purpose: set the tone and mask asset loading.
+• Layout: full-screen Ink. Label top-left, counter bottom-left at Display XL in Paper, an Orange bar growing along the bottom edge in sync with the counter.
+• Copy: BUILDING BRANDS PEOPLE REMEMBER. At 100 the counter resolves to AAIRA BASIT, then the curtain lifts.
+• Animation: counter eases 0 to 100 over 1.8s. Curtain exits with translateY(-100%) over 700ms, cubic-bezier(0.76, 0, 0.24, 1).
+• Rules: first visit per session only (sessionStorage flag). Skipped under prefers-reduced-motion. Never block longer than 2.5s, even if assets are slow.
+• Mobile: same behaviour, counter at 96px.
+Navigation
+• Purpose: orientation without clutter.
+• Layout: fixed, 80px tall. Left: AAIRA. with an Orange full stop. Right: Work, Services, About, Contact. No CV, no Resume.
+• Over the hero: because the hero carries no overlay, each nav link sits in a small Paper-filled tag with a 2px Ink border. This keeps links legible over any footage and adds to the brutalist feel. After 80px of scroll the tags dissolve into a Paper bar with a 2px Ink bottom border.
+• Interaction: underline grows from the left in 200ms ease-out. The active section shows an 8px Orange square before its label. The bar hides on scroll down and returns on scroll up (300ms).
+• Services scrolls to Creative Expertise.
+• Mobile: AAIRA. on the left, a bordered MENU button on the right. It opens a full-screen Ink overlay with the four links at H1 size, staggered in at 60ms, and a CLOSE button top-right.
+09.1 Hero
+• Purpose: first impression. Who, what, and confidence.
+• UX goal: within five seconds the visitor knows the name, the role and the promise, and sees one clear action.
+• Layout: 100vh, full-bleed looping video, no overlay. Bottom-left stack: role tag, name at Display XL, tagline in Body Large, then the button. Right: a rotating circular sticker, 160px, Orange fill, Ink text on a circular path.
+• Hero media: an 8 to 12 second seamless loop, muted, no audio. Build it from Aaira’s own campaign and brand frames, or from AI-assisted visuals, kept calm so the type stays readable. The loop is a showreel of work, not a motion-design claim.
+• Legibility rule: choose or grade footage so the lower-left area stays dark. If the final footage is light, set the name in Ink inside a Paper block with a 2px border instead of Paper text on video. Decide this when the footage is chosen.
+Copy
+• Role tag: CREATIVE DIRECTOR & VISUAL DESIGNER
+• Name: AAIRA BASIT
+• Tagline (DRAFT): Building thoughtful brands, campaigns and visual systems that people remember.
+• Button: VIEW WORK ↓
+• Sticker: BRANDS ✺ CAMPAIGNS ✺ SYSTEMS ✺
+Animation (starts the moment the loader curtain lifts, t = 0)
+• 0.0s: video fades in over 600ms.
+• 0.4s: name letters rise from a clipped mask, 40ms stagger per letter, 700ms each, cubic-bezier(0.22, 1, 0.36, 1).
+• 1.0s: role tag slides in from the left, 400ms.
+• 1.3s: tagline fades up 24px, 500ms.
+• 1.6s: button scales 0.9 to 1 with a slight overshoot, 400ms.
+• 2.0s: sticker pops from scale 0 to 1 with back-out easing, 500ms, then rotates continuously (14s per turn, linear).
+Interaction
+• Button hover: fill Ink to Orange Deep, arrow drops 4px, 250ms ease-out.
+• Sticker hover: rotation speed doubles and scale goes to 1.08.
+Mobile
+• Video stays, with a poster image as fallback on slow connections or data-saver mode.
+• Name wraps to AAIRA / BASIT at 72px. Sticker shrinks to 96px and sits top-right below the nav.
+Marquee (directly under the hero)
+• 64px tall, Orange background, 2px Ink borders top and bottom, Ink text at 28px bold.
+• Copy: BRAND IDENTITY ✺ CAMPAIGN DESIGN ✺ CREATIVE DIRECTION ✺ PRINT ✺ AI CREATIVE PRODUCTION ✺ SOCIAL SYSTEMS ✺ PRESENTATION DESIGN ✺ VISUAL STORYTELLING ✺
+• Animation: 40s per loop, linear, speeds up slightly with scroll velocity, pauses on hover.
+09.2 Selected Work
+• Purpose: prove range through scale.
+• UX goal: the visitor sees real work before reading anything. Every project owns a full screen, magazine-style.
+• Section header: label SELECTED WORK, heading Selected work (03), subline: Brands built from the logo to the last post.
+Project block layout (repeat for each)
+• 100vh, full-bleed image (2400px wide minimum), cropped off-centre on purpose.
+• A Paper info panel with a 2px Ink border and hard shadow, bottom-left, five columns wide. Contents: outlined index number (01, 02, 03), project name at H3, category label, discipline tags, one-line description, and a VIEW PROJECT ↗ link.
+• Add one proof point per project in the description: a launch, a reach figure, the volume of assets, or the exact role held. [PROOF POINT]
+Project 01: Amigos Overseas
+• Category: Education Consultancy
+• Tags: Creative Direction · Campaign Design · Print · Social Media
+• Description (DRAFT): An international education consultancy given a visual language that holds across print, events and every post.
+Project 02: Buda Fashion
+• Category: Fashion Startup
+• Tags: Brand Campaign · Social Media
+• Description (DRAFT): Campaign and social visuals for a fashion startup, carrying the brand’s aesthetic from launch to the runway.
+Project 03: Manaaq Creatives (opens into the mini-agency block below)
+• Category: Creative Company · Four Brands
+• Tags: Design · Social Media · Brand Management
+• Description (DRAFT): One parent company, three brands, one creative lead.
+Animation
+• Image parallax: translateY from -8% to +8% across the viewport.
+• On enter: info panel rises 40px and fades in over 700ms. The outlined index number draws its stroke over 800ms.
+• Hover: image scales 100% to 104% over 600ms ease-out. The cursor becomes a 96px Orange circle labelled VIEW. The panel lifts 8px and the hard shadow appears.
+Mobile
+• Image at 80vh. The info panel docks to the bottom, full width. The whole block is tappable.
+Manaaq mini-agency block
+• Purpose: show systems-level work. One lead running several brands at once.
+• Layout: Ink section, at least 100vh. Left: a sticky title, MANAAQ CREATIVES at H1 in Paper, with the intro. Right: four stacked horizontal panels (an accordion): Manaaq, Ellie Junior, Oopsies, NH Consultants. Collapsed panels are 10vh bars showing the name only. The open panel expands to about 60vh and shows a three-image grid, a descriptor and a role line.
+• Intro (DRAFT): One parent company. Three brands. One creative lead handling design, social media systems and day-to-day brand management for all of them.
+• Panel descriptors:
+    ◦ Manaaq: [one-line descriptor of the company]
+    ◦ Ellie Junior: Toddler apparel and baby products.
+    ◦ Oopsies: A Manaaq subsidiary brand. [add category]
+    ◦ NH Consultants: Overseas educational consultancy.
+• Role line (all panels): Design · Social media · Content · [add]
+• Cursor label: OPEN ↘
+• Animation: panels expand over 500ms, cubic-bezier(0.76, 0, 0.24, 1). The inner images fade in with an 80ms stagger. Panel index numbers flip as they open.
+• Mobile: vertical accordion, tap to expand, one open at a time. The sticky title becomes a static heading.
+Closing row for the section
+• Also: SZABIST Business Incubation Centre · Consultivo · Anebos Studios
+• Link: VIEW ALL WORK → [URL]
+09.3 Creative Expertise
+• Purpose: present scope as capability, not a skills list.
+• UX goal: a list that is fast to scan and rewards hovering with real project previews.
+• Layout: Ink section. Label CREATIVE EXPERTISE. Heading (H1, Paper): Not skills. Expertise. Below it, nine full-width rows at H2 size. Each row has a number (01 to 09) on the left and a short descriptor in Label style on the right. Rows are divided by 1px lines in Paper at 24% opacity.
+Rows (DRAFT descriptors)
+1. 01 Brand Identity: Logos, colour, type and guidelines that hold together.
+2. 02 Campaign Design: Ideas built to travel across channels.
+3. 03 Creative Direction: Setting the look, the standard and the story.
+4. 04 Print Design: Magazines, brochures, flyers, standees, wallpapers.
+5. 05 AI Creative Production: AI-assisted images and reels, directed with intent.
+6. 06 Social Media Systems: Templates and rhythms that stay consistent at volume.
+7. 07 Presentation Design: Pitch decks and company profiles that persuade.
+8. 08 Visual Storytelling: Turning a brief into a sequence people follow.
+9. 09 Marketing Design: Ads and launch material that do a job.
+Interaction
+• Hover: the row text turns Orange and indents 24px over 250ms. A floating preview card (320 by 400px, White, 2px Ink border, hard shadow) follows the cursor, cycling through three relevant project images. It tilts between -3° and 3° based on cursor velocity.
+• Mobile: tap a row to expand it inline with three thumbnails. No floating cards.
+09.4 About
+• Purpose: personality and positioning, in Aaira’s own voice.
+• UX goal: the visitor feels they have met a person who thinks like a creative director.
+• Layout: Paper. Columns 1 to 5: a portrait at 4:5 with a 2px border, hard shadow and a -2° tilt, with a small sticker on one corner. Columns 7 to 12: the text. Label ABOUT.
+Copy
+• Statement (H2 size): I don’t just design. I build visual systems that help brands communicate with clarity, consistency and purpose.
+• Paragraph 1: From startup launches and international education campaigns to fashion brands and corporate presentations, my work combines strategy with design to create experiences that are memorable, functional and commercially effective.
+• Paragraph 2: Whether I’m developing a complete visual identity, directing a campaign, designing for print or producing AI-assisted creative content, my goal stays the same: create work people remember.
+• Optional paragraph 3 (DRAFT, uses the psychology degree as an edge): Trained in psychology, I design for how people actually notice, feel and decide.
+Fact strip (from the CV)
+• Based in: Islamabad, Pakistan
+• Languages: English, Urdu
+• Education: BSc Social Sciences (Psychology), SZABIST Islamabad
+• Focus: Brand · Campaigns · Print · AI-assisted creative
+Animation
+• The statement reveals line by line with a mask, 900ms per line, 100ms stagger.
+• The words visual systems get an Orange Tint highlight that wipes in from the left over 600ms once in view.
+• The portrait moves slower than the text (parallax factor 0.9). The sticker rotates slowly.
+Mobile: portrait first, then the text. Fact strip becomes two columns.
+09.5 Experience
+• Purpose: credibility, kept short.
+• UX goal: a timeline a hiring manager can scan in ten seconds, with detail available on demand.
+• Layout: Concrete section. Left: a sticky, outlined year numeral at about 200px that changes as the visitor scrolls. Right: four expandable year rows (2023, 2024, 2025, 2026). No bullet points on the live site.
+Entries (DRAFT, from the CV, with no invented numbers)
+• 2023
+    ◦ SZABIST Business Incubation Centre · Co-Lead, Marketing & Design (2023 to 2024). Led content and visual branding for incubation programs and events, and told startup stories through advertising and online media.
+• 2024
+    ◦ Consultivo · Marketing & Design Intern (Feb to Mar 2024). Supported branding strategy and digital campaign content.
+    ◦ Anebos Studios · Founder (Dec 2024 to Dec 2025). Started a creative studio for branding, design and marketing, and ran strategy and client operations.
+    ◦ Amigos Overseas · [confirm title] (Dec 2024 to Apr 2026). Designed and managed visual communication for an international education consultancy.
+• 2025
+    ◦ Buda Fashion · Creative Designer & Marketing Associate (Apr to Aug 2025). Created campaign visuals and social content for a fashion startup, including support for events and fashion shows.
+    ◦ Manaaq Creatives · [title] ([dates]). Sole designer and social media manager across Manaaq, Ellie Junior, Oopsies and NH Consultants.
+• 2026
+    ◦ Manaaq Creatives continues, if current. [confirm]
+    ◦ BSc Social Sciences (Psychology), SZABIST Islamabad, completes July 2026.
+Animation: the sticky year crossfades over 300ms. Rows expand over 400ms ease-out. Entries inside a row fade up with a 60ms stagger.
+Mobile: no sticky numeral. Each year is a full-width accordion with its numeral at 72px outlined.
+Title consistency: the titles shown here must match the CV and LinkedIn. See Section 15.
+09.6 Clients
+• Purpose: social proof without logo clutter.
+• Layout: Paper. Label CLIENTS & BRANDS. Names set as a typographic wall at Display scale, left-aligned, wrapping across the grid like a poster, separated by ✺.
+Copy
+AMIGOS ✺ MANAAQ ✺ BUDA ✺ ELLIE JUNIOR ✺ OOPSIES ✺ NH CONSULTANTS ✺ CONSULTIVO
+Hover labels (small, appear below the name)
+• Amigos: Education consultancy
+• Manaaq: [category]
+• Buda: Fashion startup
+• Ellie Junior: Toddler apparel and baby products
+• Oopsies: [category]
+• NH Consultants: Overseas educational consultancy
+• Consultivo: [category]
+Interaction: the hovered name turns Orange and the others fall to 25% opacity over 250ms.
+Mobile: stacked list. Tapping a name shows its category inline.
+Check before launch: only name brands Aaira has permission to show. Confirm any NDAs.
+09.7 Testimonials (optional)
+• Include only real quotes, shared with permission. If there are none by launch, remove the section. Do not write placeholder quotes into the live site.
+• Layout: one large quote at H2 size with a single word in Instrument Serif italic. Attribution in Label style. Square bordered arrow buttons.
+• Template: “[Quote, 20 to 35 words.]” [Name], [Role], [Company]
+• Animation: quote crossfades with a 24px vertical slide, 500ms. No auto-advance.
+09.8 Contact
+• Purpose: convert.
+• Layout: Ink, full viewport, one idea. The headline sits large and left-aligned, with three buttons below it. A small rotating sticker reads SAY HELLO.
+Copy
+• Heading: Have an idea?
+• Second line: Let’s build something unforgettable.
+• Buttons: EMAIL ME · LINKEDIN ↗ · PORTFOLIO PDF ↓
+• Email address shown as a large link: aaira.basit80@gmail.com. Clicking copies it and the label changes to COPIED ✺ for two seconds.
+Animation: headline words rise with a 90ms stagger. Buttons use the Orange Deep hover.
+Mobile: buttons stack at full width.
+Privacy note: leave the phone number off the public site unless Aaira wants calls from strangers. An optional contact form needs spam protection.
+09.9 Footer
+• Layout: Paper with a 2px Ink top border. Left: © 2026 Aaira Basit. Centre: Islamabad, Pakistan with a live local time (PKT). Right: BACK TO TOP ↑. Below: LinkedIn · Email · Portfolio PDF.
+• Wordmark: a huge AAIRA. at about 20vw, cropped by the bottom of the page.
+• Sign-off: Made in Islamabad. Built to be remembered.
+10 · Complete Copy Deck (items outside the sections)
+Metadata
+• Page title: Aaira Basit | Creative Director & Visual Designer
+• Meta description (DRAFT, keep under 160 characters): Creative Director & Visual Designer building brands, campaigns and visual systems. Brand identity, print, social and AI-assisted creative. Based in Islamabad.
+Interface labels
+• Navigation: AAIRA. / Work / Services / About / Contact
+• Buttons: VIEW WORK ↓ · VIEW PROJECT ↗ · EMAIL ME · LINKEDIN ↗ · PORTFOLIO PDF ↓ · BACK TO TOP ↑
+• Cursor labels: VIEW (projects), OPEN (Manaaq panels), COPY (email), DRAG (only if a slider is draggable)
+• Project card hover line: Step inside ↗
+• Image loading line (only if images are slow): Loading the good stuff.
+• Grid easter egg (G key) toast: Grid on. Structure is the fun part.
+Contact form (only if built)
+• Fields: Your name · Your email · What are we building?
+• Submit: SEND IT
+• Success: Got it. Talk soon. [add a response-time promise only if Aaira can keep it]
+• Error: Something broke on our side. Email me directly at aaira.basit80@gmail.com.
+404 page
+• Display: 404
+• Line: This page didn’t make the final cut.
+• Button: BACK TO THE WORK
+• Layout: Ink background, giant outlined 404 in Paper, the Orange sticker rotated beside it.
+Image alt-text pattern
+[Brand] [deliverable], [what it shows]. Write one for every image, specific and short.
+11 · Motion Direction
+Motion should feel confident and a little cheeky: quick on hover, slower and weightier on reveals. Nothing bounces on text, and nothing moves without a reason.
+Tokens
+• Ease out (default entrance and hover): cubic-bezier(0.22, 1, 0.36, 1)
+• Ease in-out (curtains, panels): cubic-bezier(0.76, 0, 0.24, 1)
+• Ease back (stickers, buttons popping in): cubic-bezier(0.34, 1.56, 0.64, 1)
+• Durations: fast 200ms, base 250ms, medium 500ms, slow 700ms, hero 900ms
+Hover specifications
+• Buttons: scale 100% to 102%, 250ms ease-out. Fill Ink to Orange Deep. Arrow icons shift 4px.
+• Cards and panels: lift 8px, hard shadow (6px 6px 0 Ink) appears, 250ms ease-out. Border stays Ink.
+• Project images: zoom 100% to 104%, 600ms ease-out, on an overflow-hidden frame so the border never moves.
+• Navigation links: underline grows from the left, 200ms ease-out, and shrinks to the right on exit.
+• Expertise rows: text turns Orange and indents 24px, 250ms.
+• Client names: hovered name turns Orange, the rest fall to 25% opacity, 250ms.
+• Tags: fill flips from transparent to Ink with Paper text, 200ms.
+Scroll behaviour
+• Section reveals: opacity 0 to 100% and translateY 40px to 0, 700ms ease-out, 80ms stagger between siblings. Trigger when 15% of the element is in view. Play once only.
+• Heading reveals: each line sits in an overflow-hidden mask and rises from 100% to 0, 900ms, 100ms stagger between lines.
+• Parallax: project images move -8% to +8% of their height across the viewport. The About portrait uses a factor of 0.9. Never parallax text.
+• Marquee: 40s per loop, linear. Scroll velocity adds up to 1.5x speed.
+• Smooth scrolling (desktop only): a Lenis-style lerp with a duration around 1.1s. Keep native scrolling on touch devices.
+• Sticky elements: navigation, Manaaq title, Experience year numeral. Each sticky element must release cleanly at the end of its section.
+Custom cursor (desktop with a mouse only)
+• Default: a 12px dot, Ink on Paper sections and Paper on Ink sections, following the pointer with a lerp of about 0.2.
+• Over links and buttons: grows to a 48px outlined circle, 200ms.
+• Over projects: grows to a 96px Orange circle with an Ink label (VIEW), 300ms.
+• Over Manaaq panels: same circle with the label OPEN ↘.
+• Over the email link: label COPY.
+• Never hide the system cursor on form fields. Disable the custom cursor entirely on touch devices and under reduced motion.
+Page and state transitions
+• Project pages open with an Ink curtain, 600ms ease in-out, with the project name set large during the cover.
+• Accordions (Manaaq, Experience, Expertise on mobile) animate height over 400 to 500ms and never jump.
+Reduced motion
+Under prefers-reduced-motion: no parallax, no smooth scroll, no custom cursor, no marquee movement, a static sticker, and every reveal becomes a 200ms opacity fade. The site must read as complete with zero motion.
+Motion don’ts
+• No animation over one second except the loader and the hero sequence.
+• No bouncing or wobbling text.
+• No autoplaying sound.
+• No looping animation other than the marquee and the sticker.
+• No more than one element animating for attention in the same viewport.
+12 · Brutalist Elements
+Use these where the structure can take them, and never all at once.
+• Huge outlined numbers: project indexes (01, 02, 03) and the experience years. Transparent fill, 2px Ink outline.
+• Outlined buttons: secondary actions use a 2px Ink border, no fill, and fill with Ink on hover.
+• Oversized labels: section labels (SELECTED WORK, ABOUT) at Label size but with wide tracking, set against a huge heading.
+• Unexpected image crops: project images are cropped off-centre, with a subject cut by the edge, at least once per project.
+• Rotated stickers: three on the whole page (hero, About, Contact), each 96 to 160px, tilted between -12° and 12°.
+• Hard shadows and thick borders: on info panels, tags and floating cards.
+• Full-bleed dividers: 2px Ink lines between major sections.
+• Grid overlays: the 12% grid lines in the hero and About, and the G-key overlay.
+• Marquee strips: one under the hero, and optionally one above the footer.
+Limits
+• One rotated element per screen at most.
+• If a screen already has a giant outlined number, skip the sticker on that screen.
+• Body copy always sits on a flat, plain surface. Brutalism lives around the text, never behind it.
+13 · Components
+• Button, primary: Ink fill, Paper text, 14px uppercase, 56px tall, 0 radius, 32px horizontal padding. Hover fills Orange Deep. Focus ring 2px Orange Deep.
+• Button, secondary: transparent, 2px Ink border, same size. Hover fills Ink.
+• Nav tag: Paper fill, 2px Ink border, 36px tall, 15px text.
+• Project panel: Paper, 2px Ink border, hard shadow, 32px padding. Contains index, title, category, tags, description, link.
+• Tag or badge: 12px uppercase label, 2px Ink border, 28px tall, 12px horizontal padding.
+• Sticker: circular, Orange fill (or Orange Tint), 2px Ink border, circular text path in Ink, 96 to 160px.
+• Accordion panel (Manaaq, Experience): 2px bottom border, header row 80px tall, animated height, focusable header with aria-expanded.
+• Expertise row: 96px tall minimum, number left, title centre-left at H2, descriptor right.
+• Floating preview card: 320 by 400px, White, 2px Ink border, hard shadow, follows cursor.
+• Marquee: 64px strip, duplicated content for seamless loop, aria-hidden on the duplicate.
+• Testimonial: large quote, attribution label, square bordered arrow buttons (48px).
+• Form field (if built): 56px tall, 2px Ink border, Paper fill, label above in Label style, Orange Deep focus border, inline error text in Ink with an Orange icon.
+• Cursor: dot and expanded states as defined in Section 11.
+• Toast: Ink box, Paper text, bottom-left, appears for 2.5s.
+14 · Copywriting Principles
+The homepage copy in Sections 09 and 10 follows these rules. Use them for every new line added later.
+• Lead with the outcome, not the title. Instead of “I am a designer who…”, write “Building brands people remember.”
+• Verbs over adjectives. Build, direct, launch, shape, run.
+• Short sentences. If a line needs a comma to breathe, it is probably two lines.
+• Specific beats impressive. One real proof point beats three adjectives.
+• First person, plain words.
+• Avoid: passionate, detail-oriented, hard-working, creative thinker, unique, innovative, rockstar, ninja, guru.
+• Use: build, direct, systems, campaigns, clarity, consistency, memorable, launch.
+• Never claim what the work cannot show. Motion design is not claimed. AI-assisted production is described as exactly that.
+Before and after
+• Before: “I am a passionate designer with experience in social media.” After: “I build social systems that stay consistent at volume.”
+• Before: “Detail-oriented Visual Communications Designer.” After: “Creative Director & Visual Designer.”
+• Before: “Worked on several brands.” After: “One parent company, three brands, one creative lead.”
+The CV summary still opens with “Detail-oriented Visual Communications Designer.” Update it so the CV and the website say the same thing.
+15 · Developer Notes and Handoff
+Suggested build approaches
+• Fast route: Framer or Webflow, using the tokens in Sections 05 to 07. Best if Aaira will edit the site herself.
+• Custom route: Next.js or Astro with GSAP (ScrollTrigger) for scroll animation and a Lenis-style smooth scroller. Best for full control of the motion in Section 11.
+• Either way, build the design tokens first (colours, type scale, spacing, durations, easing) so the whole site changes from one place.
+Performance targets
+• Largest Contentful Paint under 2.5s, Cumulative Layout Shift under 0.1, Interaction to Next Paint under 200ms, on a mid-range phone over 4G.
+• Hero video: H.264 MP4 plus WebM, 1080p, target under 4MB, 8 to 12 seconds. Attributes: autoplay, muted, loop, playsinline, preload=metadata, with a poster image. Do not autoplay on data-saver or reduced-motion.
+• Images: AVIF with WebP fallback, responsive srcset, explicit width and height to prevent layout shift. Load the first project image eagerly, everything below the fold lazily.
+• Fonts: self-host WOFF2, subset to Latin, font-display: swap, preload the two weights used above the fold.
+• JavaScript: code-split animation libraries, initialise the cursor and parallax only on devices that support them.
+• Total page weight target: under 2.5MB before lazy-loaded imagery.
+Responsive behaviour
+• Breakpoints: 390 (mobile), 768 (tablet), 1024 (laptop), 1440 (desktop). Test at 360, 390, 768, 1024, 1280, 1440 and 1920.
+• Anywhere a desktop hover reveals content, mobile needs a tap equivalent.
+• Anchor links offset by 80px to clear the fixed navigation.
+• Keep native scrolling on touch devices.
+Accessibility
+• Skip-to-content link as the first focusable element.
+• Visible focus ring (2px Orange Deep, 3px offset) everywhere.
+• Accordions work with Enter and Space and expose aria-expanded.
+• Decorative marquee duplicates and stickers are aria-hidden. Content inside them also appears as real text elsewhere.
+• Every image has specific alt text (pattern in Section 10).
+• Respect prefers-reduced-motion (Section 11).
+• Check every colour pair against WCAG AA (Section 05 lists the ones to watch).
+SEO and sharing
+• Page title and meta description from Section 10.
+• Open Graph image at 1200 by 630: Paper background, the name in Display XL, the role line in Orange.
+• Person structured data (JSON-LD): name, jobTitle, url, sameAs (LinkedIn).
+• Favicon: an Orange full stop on an Ink square, echoing the AAIRA. wordmark.
+• XML sitemap and a clean 404 page.
+Analytics events to track
+View Work click · project opened · Manaaq panel opened (and which one) · email copied · LinkedIn clicked · Portfolio PDF downloaded. Prefer a cookieless analytics tool so no consent banner is needed.
+Figma file structure
+1. Cover
+2. Foundations (colour, type, grid, spacing, motion tokens)
+3. Components (every item in Section 13, with all states)
+4. Homepage, desktop (1440)
+5. Homepage, tablet (768)
+6. Homepage, mobile (390)
+7. Prototype flows (loader, hero sequence, Manaaq accordion, expertise hover)
+Use Figma variables for colour and spacing, and name layers with the section numbers used in this document.
+Open items and content checklist
+The design can start now. These items need Aaira before the site can launch.
+1. Hero loop: an 8 to 12 second clip at 1920 by 1080, or the frames to build it from.
+2. Project imagery: at least six high-resolution images per featured project, plus three per Manaaq brand panel.
+3. Proof points: one real result or role detail per project.
+4. Manaaq details: a one-line company descriptor, Aaira’s title and dates there, and the categories for Oopsies, Manaaq and Consultivo.
+5. Titles that match everywhere: the CV lists Amigos Overseas as Executive Assistant (Design & Operations), while the site positions Aaira as Creative Director. Decide a title she can defend in an interview with examples of what she directed, then update the CV, LinkedIn and this site together so they agree.
+6. Portrait photo for the About section.
+7. Testimonials: real quotes with permission, or remove the section.
+8. Permissions: confirm which brand names and work can be shown publicly (NDAs).
+9. Portfolio PDF: exported and hosted, with the final link.
+10. Domain, email and LinkedIn URL: confirm the exact links for the buttons and footer.
+11. Decisions: Satoshi or Neue Montreal; whether to add the optional mono label font; whether the hero footage is dark enough for Paper text or needs the Paper-block treatment.
+End of brief.
+Part Two: Complete Website Guide
+Part One defined the homepage. Part Two covers the rest of the site: the sitemap, the Work page, a case study template, drafted case studies for every brand, and full pages for Services, About and Contact, with copy ready to use.
+How the copy was written. It uses only what is in the CV and what Aaira has described: Creative Director work across several brands, campaigns, brand identity, logos and guidelines, social media, post and reel design, print (magazines, wallpapers, brochures), pitch decks, and AI-assisted images and reels. Motion design is not claimed anywhere. No client results or numbers are invented. Where a real number would make a paragraph stronger, a short [bracket] marks the spot. Every paragraph marked DRAFT is a first pass: edit any sentence that does not match what actually happened.
+16 · Site Architecture
+Sitemap
+• Home (/)
+• Work (/work)
+    ◦ Amigos Overseas (/work/amigos-overseas)
+    ◦ Buda Fashion (/work/buda-fashion)
+    ◦ Manaaq Creatives (/work/manaaq), a hub page for four brands
+        ▪ Ellie Junior (/work/manaaq/ellie-junior)
+        ▪ Oopsies (/work/manaaq/oopsies)
+        ▪ NH Consultants (/work/manaaq/nh-consultants)
+    ◦ Earlier work: SZABIST Business Incubation Centre, Consultivo, Anebos Studios (shown as cards on the Work page, no separate pages needed)
+• Services (/services)
+• About (/about)
+• Contact (/contact)
+• Utility pages: 404, thank-you (after a form send), privacy (short), Portfolio PDF (/aaira-basit-portfolio.pdf, linked from Contact and the footer only)
+Navigation rules
+• Main navigation on every page: AAIRA. · Work · Services · About · Contact. No CV or Resume link.
+• On the homepage, Services scrolls to the Creative Expertise section. On every other page it goes to /services.
+• The active page shows the 8px Orange square before its label.
+• Case study pages show a small BACK TO WORK link under the nav and a NEXT PROJECT bar at the bottom.
+Main visitor journeys
+• Recruiter or hiring manager: Home → Work → one case study → About → Contact or Portfolio PDF.
+• Founder or marketing lead: Home → Services → Work → Contact.
+• Agency or collaborator: Home → Work → Manaaq hub → Contact.
+Launch phases
+• Phase 1 (launch): Home, Work, Amigos Overseas, Buda Fashion, Manaaq hub, Services, About, Contact, utility pages.
+• Phase 2 (after launch): Ellie Junior, Oopsies and NH Consultants as full pages, plus any earlier-work case studies. Until then, the Manaaq hub carries a short section for each brand and the sub-brand links point to it.
+URL and naming rules
+Lowercase, hyphenated, no dates or numbers in URLs. Page titles follow the pattern [Page] | Aaira Basit.
+17 · Work Page
+• Purpose: show the full range quickly and let visitors filter by what they need.
+• UX goal: a visitor finds a relevant project in under ten seconds.
+Layout
+• Header: H1 at Display scale, a one-line subline and a short intro paragraph.
+• Filter row: bordered chips, a single selection at a time.
+• Grid: asymmetric, 12 columns. Cards alternate between 7 and 5 columns wide, so rows never match. Each card has an image (16:10 or 4:5, alternating), an outlined index number, the project name at H3, category label and discipline tags.
+• Earlier-work strip at the bottom: three smaller text cards on Concrete.
+• Closing bar (Ink): the CTA and a button.
+Copy
+• H1: Work.
+• Subline: Brands, campaigns and systems, built end to end.
+• Intro (DRAFT): A selection of the brands I’ve designed for, directed and kept consistent, from the first logo to the latest post. Each project shows what I was responsible for, how I approached it and what I made.
+• Filter chips: ALL · BRAND IDENTITY · CAMPAIGNS · PRINT · SOCIAL · PRESENTATIONS · AI CREATIVE
+• Empty filter state: Nothing here yet. Try another filter.
+• Closing bar heading: Don’t see your category? Tell me about it.
+• Closing bar button: START A CONVERSATION
+Cards
+1. Amigos Overseas. Education Consultancy. Tags: Creative Direction · Campaigns · Print · Social. Line: A consultancy’s whole look, from expo standee to Instagram story.
+2. Buda Fashion. Fashion Startup. Tags: Campaigns · Social. Line: Campaign and social visuals for a fashion startup in Hungary.
+3. Manaaq Creatives. Creative Company · Four Brands. Tags: Brand Identity · Social · AI Creative · Print. Line: One creative lead behind four brands.
+4. Ellie Junior. Toddler Apparel and Baby Products. Tags: Social · AI Creative · Campaigns. Line: Soft, trustworthy visuals for parents scrolling fast.
+5. Oopsies. A Manaaq Brand. Tags: Social · Brand Identity. Line: A subsidiary brand with a look of its own.
+6. NH Consultants. Overseas Educational Consultancy. Tags: Social · Presentations. Line: Clear, credible design for families making a big decision.
+Earlier-work cards
+• SZABIST Business Incubation Centre (2023 to 2024): content and visual branding for incubation programs and events.
+• Consultivo (Feb to Mar 2024): branding support and digital marketing content.
+• Anebos Studios (2024 to 2025): a creative studio for branding, design and marketing, founded and run by Aaira.
+Interaction and animation
+• Card hover: image zooms 100% to 104% over 600ms, tags flip to Ink fill, cursor becomes the VIEW circle.
+• Filter change: cards not matching fade to 0 and scale to 96% over 250ms, then the grid reflows over 400ms ease in-out. Matching cards stay put where possible.
+• Entry: cards rise 40px and fade in with an 80ms stagger.
+• Mobile: single column, filter chips scroll horizontally, no alternating widths.
+18 · Case Study Template
+Every project page follows the same skeleton, so the work reads as a body of work and not a pile of images.
+Page structure
+1. Hero: full-bleed image at 100vh, project name at H1 in a Paper block with a hard shadow, category label above it.
+2. Fact bar: a 2px-bordered strip with five cells: Client · Role · Scope · Year · Tools. List only the tools actually used on that project.
+3. Overview: two or three sentences at Body Large, in columns 4 to 10.
+4. The challenge: one short paragraph, labelled THE CHALLENGE.
+5. The approach: three to four numbered steps, each with a bold lead-in and one sentence. Outlined numbers 01 to 04.
+6. The work: a sequence of image modules (below).
+7. Outcome: one short paragraph. Add a real number or result where one exists.
+8. Next project bar: full-width, Ink, with the next project’s name at Display scale and an arrow.
+Image modules
+• Full-bleed: one image, edge to edge, 100vh.
+• Two-up: two images in a 6/6 split. Offset the right one down by 80px for a broken-grid feel.
+• Three-up: three images in a 4/4/4 split.
+• Detail crop: a tightly cropped image beside a caption, columns 1 to 7 and 9 to 12.
+• Mockup: the work placed in context (a printed brochure, a phone, a standee).
+• System sheet: colours, type and templates laid out flat.
+• Captions: Label style, one line, always saying what the viewer is looking at.
+Writing formula
+• Overview: who the client is, then what Aaira was responsible for.
+• Challenge: the one tension that made the work interesting.
+• Approach: decisions, not tasks. Each step explains a choice.
+• Outcome: what existed at the end that did not exist at the start.
+Animation
+• Hero image eases from 108% to 100% scale over 1.2s on load.
+• Sections reveal with the standard 40px fade-up. Images in modules parallax by 6%.
+• NEXT PROJECT bar: on hover the next project’s name slides in from the right over 500ms while the arrow rotates 45°.
+Mobile
+Single column. The fact bar becomes a two-column grid. Image modules collapse to one image per row, keeping full-bleed images edge to edge.
+19 · Case Studies (Draft Copy)
+Each case study below is ready to drop into the template in Section 18. Image notes say what to show. The Outcome paragraphs stay number-free on purpose, with a bracket where a real result would help.
+19.1 Amigos Overseas
+• Category: Education Consultancy
+• Fact bar: Client: Amigos Overseas Education · Role: Creative Direction and Design Operations [confirm title] · Scope: Campaign design, social media, print, event material, presentations · Year: 2024 to 2026 · Tools: Photoshop, Illustrator, Canva, PowerPoint, CapCut
+• Tagline (hero): A consultancy that helps students go abroad, with a brand that looks like it has already arrived.
+Overview
+Amigos Overseas guides students and travellers through study and visa processes. I shaped how the brand looks and sounds across social media, print and live events, so every touchpoint felt like the same company.
+The challenge
+An education consultancy sells trust before it sells anything else. Students and parents compare many options, often on social media and at expos, and they decide quickly. The brand had to look reliable, approachable and consistent wherever someone met it.
+The approach
+1. Set one visual language. Colour, type and layout rules, so a post, a brochure and a standee clearly came from the same place.
+2. Build for volume. Reusable templates for campaigns, posts and stories let the team publish often without the look drifting.
+3. Design for the room, not just the feed. Print and event pieces were made for expos and training events: brochures, flyers and standees that read from a distance.
+4. Stay close to the business. Working alongside operations meant the design answered real questions clients were asking, not imagined ones.
+The work (image sequence)
+• Full-bleed: the strongest social campaign key visual.
+• Two-up: a post and its matching story.
+• Mockup: brochure and standee at an expo.
+• System sheet: colour, type and template layouts.
+• Detail crop: a close view of the type treatment.
+Outcome
+One recognisable look across digital, print and live events, managed by a single person close to the business. [Add one real result: followers, enquiries, event turnout, or number of assets produced.]
+Next project: Buda Fashion
+19.2 Buda Fashion
+• Category: Fashion Startup (Hungary)
+• Fact bar: Client: Buda Fashion · Role: Creative Designer & Marketing Associate · Scope: Campaign visuals, social media, event and fashion-show promotion · Year: 2025 · Tools: Photoshop, Illustrator, Canva
+• Tagline (hero): A young fashion label, with visuals that carry the mood before the clothes even appear.
+Overview
+Buda Fashion is a startup brand based in Hungary. Working remotely with the CEO and the design team, I turned the brand’s aesthetic into campaign visuals and a steady social presence.
+The challenge
+A new fashion brand has to look established before it is. Every post is a first impression, and each visual had to carry the clothes, the mood and the brand’s point of view in a single frame.
+The approach
+1. Start with the clothes. Collaborating with the CEO and the design team on the clothing direction meant the visuals grew from the collection instead of being applied on top.
+2. Build a campaign look. One consistent treatment for posters, images and social content, so the brand felt curated.
+3. Tell the story around the events. Visual storytelling supported events and fashion shows, giving followers something to follow beyond product shots.
+4. Keep it moving. A regular rhythm of content kept brand awareness building between launches.
+The work (image sequence)
+• Full-bleed: the lead campaign poster.
+• Three-up: three social posts from one campaign.
+• Detail crop: typography against fabric or garment imagery.
+• Two-up: event promotion and its follow-up post.
+Outcome
+A cohesive campaign and social identity for a young label, built remotely alongside the founder and design team. [Add a real result: reach, engagement, or event turnout.]
+Next project: Manaaq Creatives
+19.3 Manaaq Creatives (hub page)
+• Category: Creative Company · Four Brands
+• Fact bar: Client: Manaaq Creatives, Ellie Junior, Oopsies, NH Consultants · Role: Sole Designer & Social Media Manager [confirm title] · Scope: Brand identity, logos, guidelines, social media design and management, post and reel design, AI images and reels, print, pitch decks · Year: [dates] · Tools: Photoshop, Illustrator, Canva, CapCut, PowerPoint, AI image and video tools [name the ones used]
+• Tagline (hero): Four brands. One creative lead. No design team.
+Overview
+Manaaq Creatives works with and through a family of brands. I was the single creative lead behind the design and social presence of Manaaq and the brands under its umbrella: Ellie Junior, Oopsies and NH Consultants. That meant identity, content, management and delivery, all from one desk.
+The challenge
+Four brands means four audiences, four tones of voice and four feeds that all need attention. Each brand needed to feel distinct, while the work still had to be planned, produced and published by one person without anything slipping.
+The approach
+1. Give each brand its own face. Separate colour, type and layout choices, so no two brands could be mistaken for each other.
+2. Share the machinery. One production system behind all four: templates, file structures, asset libraries and content calendars.
+3. Use AI as a production tool, not a shortcut. AI-generated images and reels helped cover volume, with creative direction, selection and finishing done by hand so the output still looked like the brand.
+4. Use the right format for the job. Social posts, reels, logos, brand guidelines, print pieces and pitch decks, whichever the moment called for.
+The brands (links to each page, or to the section below until Phase 2)
+• Manaaq. [one-line company descriptor]
+• Ellie Junior. Toddler apparel and baby products.
+• Oopsies. A subsidiary brand of Manaaq.
+• NH Consultants. Overseas educational consultancy.
+Hub page layout: the four brands as a stacked accordion, as in Section 09.2, each opening to a three-image grid and a three-line summary. Below it, a system sheet showing how the four brands share one workflow while looking different.
+Outcome
+Four distinct brands run through one workflow, with a steady flow of content and no dedicated design team behind it. [Add a real result: posting cadence, assets delivered per month, or growth.]
+Next project: back to the Work page, with the NEXT PROJECT bar reading SEE ALL WORK.
