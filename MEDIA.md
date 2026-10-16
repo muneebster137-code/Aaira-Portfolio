@@ -9,6 +9,7 @@ public/media/
   menu/       full-screen menu hover previews
   about/      about page portrait
   services/   one image per discipline
+  resume/     the downloadable resume PDF
   work/<project>/   hero, reels, carousel slides, showcase gallery
 ```
 
@@ -25,7 +26,7 @@ The list of slots lives in [`src/data/media.ts`](src/data/media.ts); everything 
 
 **Rules**
 
-- Images must be `.jpg` and reels must be `.webm`. Renaming a `.png`/`.mp4` doesn't convert it; export
+- Images must be `.jpg`, reels must be `.webm` and the resume must be `.pdf`. Renaming a `.png`/`.mp4` doesn't convert it; export
   or convert it (Photoshop → Export As JPG; Premiere/After Effects/HandBrake/`ffmpeg -i in.mp4 -c:v libvpx-vp9 -b:v 2M -an out.webm`).
 - Every reel has a matching **poster** `.jpg` with the same name (`reel-1.webm` + `reel-1.jpg`). The poster
   shows before the video loads and if a browser can't play it, so update both together.
@@ -85,6 +86,12 @@ Each image appears on the /services page row **and** as the hover preview in the
 | `08-visual-storytelling.jpg` | Visual Storytelling | 16:11, 1600×1100 |
 | `09-marketing-launch.jpg` | Marketing & Launch Systems | 16:11, 1600×1100 |
 
+### Resume: `public/media/resume/`
+
+| File | Where it shows | Notes |
+|---|---|---|
+| `aaira-basit-resume.pdf` | "Download PDF" button on /resume | Must be a real `.pdf`. The /resume page text lives in `src/app/resume/page.tsx`; update both together. |
+
 ## Case studies
 
 ### Amigos Overseas: `public/media/work/amigos-overseas/`
@@ -142,3 +149,29 @@ Each image appears on the /services page row **and** as the hover preview in the
 | `gallery-1.jpg` | Showcase tile: "Spring Lookbook Spread" | 4:3 landscape, 1600×1200 |
 | `gallery-2.jpg` | Showcase tile: "Creative Studio Identity" | 3:2 landscape, 1800×1200 |
 | `gallery-3.jpg` | Showcase tile: "Kids Lifestyle Packaging" | 1:1 square, 1080×1080 |
+
+### Oopsies: `public/media/work/oopsies/`
+
+| File | Where it shows | Best size |
+|---|---|---|
+| `hero.jpg` | Project cover: home "Selected work", /work grid, top of the case study | 16:9 or 4:3, 2400px wide |
+| `reel-1.webm` + `reel-1.jpg` | Reel "Oopsies Product Reel" (case study + Reel button on project cards) | 9:16, 1080×1920 |
+| `carousel-1.jpg` | Carousel slide 1: "MEET OOPSIES" | 4:5, 1080×1350 |
+| `carousel-2.jpg` | Carousel slide 2: "THE PRODUCTS" | 4:5, 1080×1350 |
+| `carousel-3.jpg` | Carousel slide 3: "GET YOURS" | 4:5, 1080×1350 |
+| `gallery-1.jpg` | Showcase tile: "Packaging System" | 4:3 landscape, 1600×1200 |
+| `gallery-2.jpg` | Showcase tile: "Social Post Set" | 1:1 square, 1080×1080 |
+| `gallery-3.jpg` | Showcase tile: "Brand Identity Sheet" | 3:2 landscape, 1800×1200 |
+
+### NH Consultants: `public/media/work/nh-consultants/`
+
+| File | Where it shows | Best size |
+|---|---|---|
+| `hero.jpg` | Project cover: home "Selected work", /work grid, top of the case study | 16:9 or 4:3, 2400px wide |
+| `reel-1.webm` + `reel-1.jpg` | Reel "Study Abroad Explainer" (case study + Reel button on project cards) | 9:16, 1080×1920 |
+| `carousel-1.jpg` | Carousel slide 1: "THINKING OF STUDYING ABROAD?" | 4:5, 1080×1350 |
+| `carousel-2.jpg` | Carousel slide 2: "WHAT YOU'LL NEED" | 4:5, 1080×1350 |
+| `carousel-3.jpg` | Carousel slide 3: "TALK TO US" | 4:5, 1080×1350 |
+| `gallery-1.jpg` | Showcase tile: "Corporate Profile" | 16:9 wide, 1920×1080 |
+| `gallery-2.jpg` | Showcase tile: "Presentation Deck" | 4:3 landscape, 1600×1200 |
+| `gallery-3.jpg` | Showcase tile: "Social Templates" | 1:1 square, 1080×1080 |

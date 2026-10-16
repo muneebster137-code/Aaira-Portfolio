@@ -6,7 +6,7 @@
  * extension. No code changes needed. MEDIA.md (repo root) lists every file and
  * where it shows up; `npm run media:check` confirms nothing is missing.
  *
- * Images are .jpg. Reels are .webm (VP9/VP8, 9:16), each with a .jpg poster of
+ * Images are .jpg, the resume is .pdf. Reels are .webm (VP9/VP8, 9:16), each with a .jpg poster of
  * the same name that shows before the video loads and if it can't play.
  *
  * Keep this file free of imports: scripts/media-check.mjs reads it directly.
@@ -76,6 +76,11 @@ export const media = {
     contact: `${M}/menu/contact.jpg`,
   },
 
+  /** Downloadable resume linked from the /resume page */
+  resume: {
+    pdf: `${M}/resume/aaira-basit-resume.pdf`,
+  },
+
   about: {
     /** Portrait beside "Managing the brand's whole visual world" */
     portrait: `${M}/about/portrait.jpg`,
@@ -99,5 +104,7 @@ export const media = {
     "buda-fashion": project("buda-fashion", { reels: 2, carousel: 3, gallery: 4, galleryReels: [1] }),
     "manaaq-creatives": project("manaaq-creatives", { reels: 1, carousel: 3, gallery: 4 }),
     "ellie-junior": project("ellie-junior", { reels: 1, carousel: 2, gallery: 3 }),
+    oopsies: project("oopsies", { reels: 1, carousel: 3, gallery: 3 }),
+    "nh-consultants": project("nh-consultants", { reels: 1, carousel: 3, gallery: 3 }),
   },
 };

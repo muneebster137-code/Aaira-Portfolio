@@ -6,6 +6,7 @@ import { ArrowUp } from "lucide-react";
 import { useSmoothScroll } from "@/components/providers/SmoothScrollProvider";
 import { CityClock, SocialPills, Wordmark } from "@/components/common/Bits";
 import RevealLines from "@/components/motion/RevealLines";
+import { projects } from "@/data/projectsData";
 
 export default function Footer() {
   const { scrollTo } = useSmoothScroll();
@@ -39,13 +40,13 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-3 flex flex-col gap-4">
             <Wordmark />
             <p className="text-white/40 normal-case leading-relaxed font-light text-xs max-w-xs mt-2">
-              Creative Director & Visual Designer building brands people can&apos;t forget.
+              I&apos;m a creative director & visual designer building brands people can&apos;t forget.
             </p>
           </div>
 
           <div className="col-span-1 md:col-span-3 flex flex-col gap-3">
             <span className="text-white/40 mb-1">Index</span>
-            <Link href="/work" className="text-white/80 hover:text-lime transition-colors">Work (04)</Link>
+            <Link href="/work" className="text-white/80 hover:text-lime transition-colors">Work ({String(projects.length).padStart(2, "0")})</Link>
             <Link href="/about" className="text-white/80 hover:text-lime transition-colors">About</Link>
             <Link href="/services" className="text-white/80 hover:text-lime transition-colors">Services</Link>
             <Link href="/contact" className="text-white/80 hover:text-lime transition-colors">Contact</Link>

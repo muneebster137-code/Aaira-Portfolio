@@ -94,7 +94,7 @@ export default function AboutPage() {
           </div>
 
           <p className="t-lead text-white/70 mt-8 max-w-3xl font-light leading-relaxed">
-            Trained in psychology at SZABIST. Executed in contemporary design. Building visual identities and brand systems engineered for permanent human memory.
+            I trained in psychology at SZABIST and I work in design. I build visual identities and brand systems made to stick in people&apos;s memory.
           </p>
         </header>
 
@@ -119,19 +119,17 @@ export default function AboutPage() {
 
             <div className="pt-2 flex items-center gap-4">
               <Magnetic strength={10}>
-                <a
-                  href="/Design%20Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/resume"
                   className="btn inline-flex"
                 >
                   <FileText className="w-3.5 h-3.5 mr-2" />
                   <span className="roll">
-                    <span className="roll-front">Download Resume PDF</span>
-                    <span className="roll-back">Download Resume PDF</span>
+                    <span className="roll-front">View My Resume</span>
+                    <span className="roll-back">View My Resume</span>
                   </span>
                   <ArrowUpRight className="w-3.5 h-3.5 ml-2" />
-                </a>
+                </Link>
               </Magnetic>
               <span className="t-label text-white/40 text-xs">2026 Archive</span>
             </div>
@@ -148,7 +146,7 @@ export default function AboutPage() {
                 I do not operate as an isolated production designer ticking tickets. I step in as a creative directress who conceives, articulates, and protects entire brand universes — from foundational typography guidelines and color physics to high-velocity daily reels, packaging, exhibition architecture, and multi-brand holding governance.
               </p>
               <p>
-                With academic training in Psychology at SZABIST Islamabad, every visual decision is grounded in cognitive heuristics: information hierarchy structured for instant retention, typographic balance establishing subconscious institutional authority, and deliberate contrast commanding human attention.
+                Because I studied psychology at SZABIST Islamabad, I ground every visual decision in cognitive heuristics: information hierarchy structured for instant retention, typographic balance establishing subconscious institutional authority, and deliberate contrast commanding human attention.
               </p>
             </div>
 
@@ -182,7 +180,7 @@ export default function AboutPage() {
               The Psychology Advantage.
             </h2>
             <ScrollWords
-              text="Design is not cosmetic ornament. It is applied human cognition. When a brand's visual syntax aligns with cognitive heuristics, the human brain accepts it without resistance — transforming fleeting impressions into permanent recall."
+              text="To me, design isn't cosmetic ornament. It's applied human cognition. When a brand's visual language works with how people think, they accept it without resistance, and a passing impression turns into something they remember."
               className="text-2xl sm:text-3xl md:text-4xl text-black font-light leading-snug"
             />
           </div>
@@ -296,7 +294,7 @@ export default function AboutPage() {
                 Ready to build something people remember?
               </h3>
               <p className="t-body text-white/70 font-light">
-                Available for selective creative directorship retainers, foundational brand sprints, and executive design consulting.
+                I take on a few creative direction retainers, brand-building sprints and design consulting projects at a time.
               </p>
             </div>
 

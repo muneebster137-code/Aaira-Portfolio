@@ -21,13 +21,13 @@ export default function SelectedWorkSection() {
           </div>
           <RevealLines
             as="h2"
-            lines={["WORK (04)"]}
+            lines={[`WORK (${String(projects.length).padStart(2, "0")})`]}
             className="t-section text-white font-medium tracking-tighter"
           />
         </div>
 
         <p className="t-body max-w-md text-white/60">
-          Four flagship brand architectures — from international higher education to European runway fashion, multi-brand umbrella holding groups, and organic baby lifestyle.
+          The brands I&apos;ve built end to end, from international higher education and European runway fashion to a multi-brand holding group and its family of labels.
         </p>
       </div>
 
@@ -135,11 +135,11 @@ export default function SelectedWorkSection() {
       {/* Bottom Archive Link */}
       <div className="mt-28 pt-12 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-6">
         <span className="t-label text-white/50">
-          Complete catalogue across brand identity, reels, campaigns and print.
+          Everything I&apos;ve made across brand identity, reels, campaigns and print.
         </span>
         <Magnetic>
           <Link href="/work" className="btn btn-thick">
-            All Work (04)
+            All Work ({String(projects.length).padStart(2, "0")})
           </Link>
         </Magnetic>
       </div>

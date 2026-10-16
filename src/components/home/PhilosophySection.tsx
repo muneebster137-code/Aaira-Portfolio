@@ -51,7 +51,7 @@ export default function PhilosophySection() {
           <div className="pt-4 flex items-center gap-4">
             <Magnetic>
               <Link href="/about" className="btn btn-solid !bg-black !text-white !border-black">
-                Agency Story & CV
+                My Story & Resume
               </Link>
             </Magnetic>
             <Link href="/contact" className="t-label u-draw text-black">

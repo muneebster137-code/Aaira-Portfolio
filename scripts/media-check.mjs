@@ -10,6 +10,7 @@ const PUBLIC = path.resolve(import.meta.dirname, "../public");
 const SIGNATURES = {
   ".jpg": [0xff, 0xd8, 0xff],
   ".webm": [0x1a, 0x45, 0xdf, 0xa3],
+  ".pdf": [0x25, 0x50, 0x44, 0x46],
 };
 
 const slots = [];

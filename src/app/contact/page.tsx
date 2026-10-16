@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState } from "react";
 import { Mail, Check, Copy, Send, FileText, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import Footer from "@/components/common/Footer";
@@ -73,7 +74,7 @@ export default function ContactPage() {
           </div>
 
           <p className="t-lead text-white/70 mt-8 max-w-3xl font-light leading-relaxed">
-            Have an ambitious venture or an existing brand that needs higher visual altitude? Reach out directly to initiate an engagement discussion.
+            Starting something ambitious, or have a brand that needs to look the part? Write to me directly and I&apos;ll get back to you.
           </p>
         </header>
 
@@ -120,7 +121,7 @@ export default function ContactPage() {
                 <span className="text-lg font-medium">Islamabad, Pakistan</span>
               </div>
               <p className="t-body text-white/60 font-light text-sm leading-relaxed">
-                Operating remotely across international time zones with European founders (Budapest, London, Berlin) and regional holding groups through asynchronous workflows and tight milestones.
+                I work remotely across time zones with founders in Budapest, London and Berlin and with regional holding groups, using async workflows and tight milestones.
               </p>
             </div>
 
@@ -128,20 +129,18 @@ export default function ContactPage() {
             <div className="space-y-4">
               <span className="t-label text-lime font-mono">CREDENTIALS & NETWORK</span>
               <div className="space-y-2.5">
-                <a
-                  href="/Design%20Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/resume"
                   className="p-4 rounded-xl bg-ink-raised border border-white/10 hover:border-lime/40 text-xs font-mono uppercase tracking-wider text-white/80 hover:text-lime transition-all flex items-center justify-between group"
                 >
                   <span className="flex items-center gap-3">
                     <FileText className="w-4 h-4 text-lime" />
-                    <span>Comprehensive Resume PDF</span>
+                    <span>Resume: view or download PDF</span>
                   </span>
                   <ArrowUpRight className="w-4 h-4 text-white/40 group-hover:text-lime transition-colors" />
-                </a>
+                </Link>
 
-                {SOCIALS.map((s) => (
+                {SOCIALS.filter((s) => s.external).map((s) => (
                   <a
                     key={s.short}
                     href={s.href}
@@ -169,7 +168,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="t-section text-white font-medium">Brief Received.</h3>
                 <p className="t-body text-white/70 max-w-md mx-auto font-light leading-relaxed">
-                  Thank you for outlining your project. Aaira will personally review your objectives and follow up within 24 to 48 hours.
+                  Thank you for telling me about your project. I&apos;ll read it myself and reply within 24 to 48 hours.
                 </p>
                 <div className="pt-4">
                   <button

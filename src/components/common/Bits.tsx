@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { useIslamabadClock } from "@/lib/useClock";
+import { LINKEDIN_URL } from "@/data/links";
 
 /** Wireframe globe, as in K72's clock. */
 export function GlobeIcon({ className = "" }: { className?: string }) {
@@ -41,10 +42,8 @@ export function Wordmark({ className = "" }: { className?: string }) {
 }
 
 export const SOCIALS = [
-  { short: "IN", label: "LinkedIn", href: "https://www.linkedin.com" },
-  { short: "BE", label: "Behance", href: "https://www.behance.net" },
-  { short: "IG", label: "Instagram", href: "https://www.instagram.com" },
-  { short: "CV", label: "Resume", href: "/Design%20Resume.pdf" },
+  { short: "IN", label: "LinkedIn", href: LINKEDIN_URL, external: true },
+  { short: "CV", label: "Resume", href: "/resume", external: false },
 ];
 
 export function SocialPills({ className = "", ink = false }: { className?: string; ink?: boolean }) {
@@ -52,15 +51,21 @@ export function SocialPills({ className = "", ink = false }: { className?: strin
     <ul className={`flex flex-wrap gap-2 ${className}`}>
       {SOCIALS.map((s) => (
         <li key={s.short}>
-          <a
-            href={s.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={s.label}
-            className={`btn !px-4 ${ink ? "btn-ink" : ""}`}
-          >
-            {s.short}
-          </a>
+          {s.external ? (
+            <a
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={s.label}
+              className={`btn !px-4 ${ink ? "btn-ink" : ""}`}
+            >
+              {s.short}
+            </a>
+          ) : (
+            <Link href={s.href} aria-label={s.label} className={`btn !px-4 ${ink ? "btn-ink" : ""}`}>
+              {s.short}
+            </Link>
+          )}
         </li>
       ))}
     </ul>

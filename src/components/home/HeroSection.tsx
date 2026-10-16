@@ -179,8 +179,8 @@ export default function HeroSection() {
           </div>
 
           <p data-hero-fade className="t-body indent-k72 order-1 col-span-12 max-w-md text-white/90 md:order-3 md:col-span-3 md:ml-auto md:text-[0.95rem] md:indent-[4rem]">
-            Aaira Basit is a creative director who builds brands from every angle — identity, campaigns, reels and the
-            systems that keep them sharp. Trained in psychology, she designs for memory, not for the feed.
+            I&apos;m Aaira Basit, a creative director who builds brands from every angle: identity, campaigns, reels and
+            the systems that keep them sharp. Trained in psychology, I design for memory, not for the feed.
           </p>
         </div>
       </div>

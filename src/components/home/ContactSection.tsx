@@ -34,7 +34,7 @@ export default function ContactSection() {
           />
 
           <p className="t-body text-white/70 max-w-xl text-lg md:text-xl font-light leading-relaxed">
-            Direct access for European & global founders, agencies, and institutions looking for complete brand architecture or ongoing creative directorship.
+            I work with founders, agencies and institutions worldwide who need a whole brand built, or someone to direct it week after week.
           </p>
 
           <div className="pt-4 flex flex-wrap items-center gap-4">
@@ -71,7 +71,7 @@ export default function ContactSection() {
             <span className="t-label text-white/40">Studio Location</span>
             <CityClock />
             <p className="text-xs text-white/60 leading-relaxed font-light mt-1">
-              Based in Islamabad, Pakistan (PKT). Working asynchronously with London, Berlin, Budapest, Tokyo and New York.
+              I&apos;m based in Islamabad, Pakistan (PKT), and I work asynchronously with teams in London, Berlin, Budapest, Tokyo and New York.
             </p>
           </div>
 
@@ -82,15 +82,13 @@ export default function ContactSection() {
 
           <div className="flex flex-col gap-3 pt-6 border-t border-white/10">
             <span className="t-label text-white/40">Formal Documentation</span>
-            <a
-              href="/Design%20Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/resume"
               className="t-label u-draw inline-flex items-center gap-2 text-white/80 hover:text-lime self-start"
             >
-              <span>Download Formal Resume & Credentials (PDF)</span>
+              <span>My Resume & Credentials</span>
               <ArrowUpRight className="h-3.5 w-3.5" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

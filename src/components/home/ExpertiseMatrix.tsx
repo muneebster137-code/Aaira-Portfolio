@@ -67,7 +67,7 @@ export default function ExpertiseMatrix() {
           />
         </div>
         <p className="t-body max-w-md text-white/60">
-          From brand systems and key visuals to 9:16 playable motion reels, AI creative workflows, and high-velocity social templates.
+          What I do day to day: brand systems and key visuals, 9:16 reels, AI-assisted creative and social templates that hold up at speed.
         </p>
       </div>
 
@@ -134,7 +134,7 @@ export default function ExpertiseMatrix() {
       {/* Bottom Menu Link */}
       <div className="mt-20 flex flex-col sm:flex-row items-center justify-between gap-6">
         <span className="t-label text-white/50">
-          Available for ongoing retainer directorships and focused sprint packages.
+          I take on ongoing retainers and focused sprints.
         </span>
         <Magnetic>
           <Link href="/services" className="btn btn-thick">

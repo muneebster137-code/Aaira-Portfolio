@@ -109,7 +109,7 @@ export default function PlayableReel({ reel }: PlayableReelProps) {
           <div className="flex items-center gap-2 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
             <span className="w-2 h-2 rounded-full bg-[#D3FD50] animate-pulse" />
             <span className="text-[11px] font-mono tracking-wider uppercase text-white font-medium">
-              {reel.views} Views
+              {reel.views ? `${reel.views} Views` : "Reel"}
             </span>
           </div>
 

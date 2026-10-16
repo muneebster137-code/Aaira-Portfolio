@@ -60,7 +60,7 @@ export default function ManaaqAccordion() {
       role: "Creative Director & Packaging Designer",
       scope: "Packaging Design · Social Systems · Merchandising",
       image: media.home.holdings.oopsies,
-      link: "/work/manaaq-creatives",
+      link: "/work/oopsies",
     },
     {
       id: "nh-consultants",
@@ -72,7 +72,7 @@ export default function ManaaqAccordion() {
       role: "Visual Communications Lead",
       scope: "Corporate Profiles · Presentation Decks · Social Media",
       image: media.home.holdings.nhConsultants,
-      link: "/work/amigos-overseas",
+      link: "/work/nh-consultants",
     },
   ];
 
@@ -92,13 +92,13 @@ export default function ManaaqAccordion() {
           />
 
           <p className="t-body text-white/70 leading-relaxed">
-            One parent holding company. Three distinct subsidiaries. One creative director managing visual identity, social media systems, packaging, and brand governance end-to-end.
+            One parent company. Three brands under it. I&apos;m the one creative lead behind all of them, handling visual identity, social media systems, packaging and day-to-day brand management.
           </p>
 
           <div className="rounded-2xl p-6 border border-white/15 text-xs flex flex-col gap-2">
             <span className="t-label text-lime">The Systems Advantage</span>
             <p className="text-white/60 leading-relaxed">
-              Unifying production tokens, reusable typography rules, and asset libraries enables four divergent brands to launch campaigns simultaneously without aesthetic compromise.
+              I run all four brands on one production system: shared templates, type rules and asset libraries. That&apos;s how they launch campaigns at the same time and still look nothing alike.
             </p>
           </div>
 

@@ -72,7 +72,7 @@ export default function WorkArchivePage() {
           />
 
           <p className="t-body max-w-2xl text-white/70 mt-6 leading-relaxed">
-            Brands, campaigns and systems, built end to end. A complete record of creative directorship across international consultancy, fashion runways, and brand holding groups.
+            Brands, campaigns and systems I&apos;ve built end to end, across international consultancy, fashion runways and a multi-brand holding group.
           </p>
 
           {/* Filter Chips Bar (K72 Pill Style) */}
@@ -236,7 +236,7 @@ export default function WorkArchivePage() {
               Don&apos;t see your category? Let&apos;s talk about it.
             </h4>
             <p className="text-sm text-white/60 font-light mt-1">
-              Custom creative direction packages calibrated to specific commercial requirements.
+              I put together creative direction packages around what your business actually needs.
             </p>
           </div>
           <Magnetic>
