@@ -116,7 +116,10 @@ export default function WorkArchivePage() {
                 </div>
 
                 {/* Media Container */}
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-900">
+                <div
+                  data-fx="rise"
+                  className="rounded-media relative aspect-[4/3] w-full bg-neutral-900"
+                >
                   {isReelOpen && project.reels[0] ? (
                     <div className="relative h-full w-full bg-black p-4 flex items-center justify-center">
                       <button

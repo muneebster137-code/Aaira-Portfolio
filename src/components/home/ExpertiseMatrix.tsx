@@ -1,29 +1,59 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { servicesData, ServicePillar } from "@/data/servicesData";
 import RevealLines from "@/components/motion/RevealLines";
 import Magnetic from "@/components/motion/Magnetic";
+import { gsap } from "@/lib/gsap";
 
 export default function ExpertiseMatrix() {
   const [hovered, setHovered] = useState<ServicePillar | null>(null);
-  const [pos, setPos] = useState({ x: 0, y: 0 });
+  // Last hovered pillar stays rendered while the preview scales out.
+  const [shown, setShown] = useState<ServicePillar | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
+  const previewRef = useRef<HTMLDivElement>(null);
+  const follow = useRef<{ x: (v: number) => void; y: (v: number) => void; r: (v: number) => void } | null>(null);
+  const lastX = useRef(0);
+
+  // Preview trails the cursor with a little lag and leans into the direction of travel.
+  useEffect(() => {
+    const el = previewRef.current;
+    if (!el) return;
+    gsap.set(el, { xPercent: -50, yPercent: -50, scale: 0, rotate: 0 });
+    follow.current = {
+      x: gsap.quickTo(el, "x", { duration: 0.7, ease: "power3.out" }),
+      y: gsap.quickTo(el, "y", { duration: 0.7, ease: "power3.out" }),
+      r: gsap.quickTo(el, "rotate", { duration: 0.9, ease: "power3.out" }),
+    };
+  }, []);
+
+  useEffect(() => {
+    gsap.to(previewRef.current, {
+      scale: hovered ? 1 : 0,
+      duration: hovered ? 0.7 : 0.4,
+      ease: hovered ? "back.out(1.8)" : "power3.in",
+      overwrite: "auto",
+    });
+  }, [hovered]);
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    if (!sectionRef.current) return;
+    if (!sectionRef.current || !follow.current) return;
     const r = sectionRef.current.getBoundingClientRect();
-    setPos({ x: e.clientX - r.left, y: e.clientY - r.top });
+    const x = e.clientX - r.left;
+    follow.current.x(x + 170);
+    follow.current.y(e.clientY - r.top);
+    follow.current.r(gsap.utils.clamp(-12, 12, (x - lastX.current) * 0.6));
+    lastX.current = x;
   };
 
   return (
     <section
       ref={sectionRef}
       onMouseMove={handleMouseMove}
-      className="theme-dark gutter relative py-32 border-t border-white/15"
+      className="theme-dark gutter relative overflow-x-clip py-24 md:py-32 border-t border-white/15"
     >
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-16 border-b border-white/15">
         <div>
@@ -46,7 +76,10 @@ export default function ExpertiseMatrix() {
         {servicesData.map((item) => (
           <div
             key={item.number}
-            onMouseEnter={() => setHovered(item)}
+            onMouseEnter={() => {
+              setHovered(item);
+              setShown(item);
+            }}
             onMouseLeave={() => setHovered(null)}
             className="group relative py-8 transition-colors hover:bg-white/[0.02]"
             data-cursor-label="Details"
@@ -75,30 +108,28 @@ export default function ExpertiseMatrix() {
       </div>
 
       {/* Floating Cursor Image Preview (Desktop Only) */}
-      {hovered && (
-        <div
-          className="pointer-events-none absolute hidden md:block z-30 w-72 h-44 overflow-hidden border border-white/20 shadow-2xl transition-transform duration-150 ease-out"
-          style={{
-            left: `${pos.x + 24}px`,
-            top: `${pos.y - 88}px`,
-          }}
-        >
+      <div
+        ref={previewRef}
+        className="rounded-media pointer-events-none absolute left-0 top-0 z-30 hidden h-48 w-72 shadow-2xl md:block"
+        aria-hidden="true"
+      >
+        {shown && (
           <div className="relative h-full w-full bg-black">
             <Image
-              src={hovered.previewImage}
-              alt={hovered.title}
+              src={shown.previewImage}
+              alt=""
               fill
               sizes="288px"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs font-mono text-white">
-              <span>{hovered.title}</span>
-              <span className="text-lime">{hovered.tools[0]}</span>
+              <span>{shown.title}</span>
+              <span className="text-lime">{shown.tools[0]}</span>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
       {/* Bottom Menu Link */}
       <div className="mt-20 flex flex-col sm:flex-row items-center justify-between gap-6">

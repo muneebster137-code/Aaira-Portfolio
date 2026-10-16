@@ -11,7 +11,7 @@ export default function Footer() {
   const { scrollTo } = useSmoothScroll();
 
   return (
-    <footer className="theme-dark gutter relative pt-32 pb-16 border-t border-white/15 select-none">
+    <footer className="theme-dark gutter relative pt-24 md:pt-32 pb-16 border-t border-white/15 select-none">
       <div className="flex flex-col gap-20">
         {/* Top Punchline */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12 pb-16 border-b border-white/15">
@@ -19,6 +19,7 @@ export default function Footer() {
             <RevealLines
               as="h2"
               lines={["TODAY,", "TOMORROW,", "YEARS FROM NOW."]}
+              outlineLines={[1]}
               className="t-section text-white font-medium tracking-tighter"
             />
           </div>

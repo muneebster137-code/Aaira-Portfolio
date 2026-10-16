@@ -83,8 +83,8 @@ export default function Navbar() {
       )
         .fromTo(
           "[data-menu-item]",
-          { y: 50, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.7, ease: "expo.out", stagger: 0.08 },
+          { y: 60, rotate: 2, opacity: 0 },
+          { y: 0, rotate: 0, opacity: 1, duration: 0.9, ease: "back.out(1.6)", stagger: 0.08 },
           "-=0.3"
         )
         .fromTo(

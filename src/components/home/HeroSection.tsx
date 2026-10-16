@@ -48,7 +48,7 @@ export default function HeroSection() {
       ctx.add(() => {
         const tl = gsap.timeline({ delay: entranceDelay() });
         tl.to("[data-hero-line]", { yPercent: 0, duration: 1.4, ease: "expo.out", stagger: 0.09 })
-          .to("[data-hero-monitor]", { width: "2.15em", duration: 1.3, ease: "expo.inOut" }, 0.35)
+          .to("[data-hero-monitor]", { width: "2.15em", duration: 1.2, ease: "back.out(1.7)" }, 0.55)
           .to("[data-hero-circle]", { strokeDashoffset: 0, duration: 1.2, ease: "power3.inOut" }, 0.75)
           .to("[data-hero-fade]", { autoAlpha: 1, y: 0, duration: 1.2, ease: "expo.out", stagger: 0.08 }, 0.7);
       });
@@ -72,9 +72,11 @@ export default function HeroSection() {
 
   return (
     <section ref={rootRef} className="theme-dark relative flex min-h-[100svh] flex-col overflow-hidden pt-28">
-      {/* Background reel — plays continuously without needing hover, exactly as shown in screenshot */}
+      {/* Background reel: always visible; hovering the monitor pushes it in a little brighter */}
       <div
-        className="pointer-events-none absolute inset-0 transition-[opacity,transform] duration-[1200ms] ease-expo scale-100 opacity-45"
+        className={`pointer-events-none absolute inset-0 transition-[opacity,transform,filter] duration-[1200ms] ease-expo ${
+          flood ? "scale-105 opacity-75" : "scale-100 opacity-55"
+        }`}
         aria-hidden="true"
       >
         {REEL.map((src, i) => (
@@ -89,11 +91,15 @@ export default function HeroSection() {
           />
         ))}
       </div>
+      <div
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/50 via-black/10 to-black/70"
+        aria-hidden="true"
+      />
 
       <div className="gutter relative z-10 flex flex-1 flex-col">
         <h1
           data-hero-punch
-          className="t-display mx-auto mt-[4vh] text-center text-[clamp(3.1rem,9.4vw,11.5rem)]"
+          className="t-display t-hero mx-auto mt-[4vh] text-center"
           aria-label="Design people can't forget"
         >
           <span className="line-mask">
@@ -177,7 +183,7 @@ export default function HeroSection() {
             </Magnetic>
           </div>
 
-          <p data-hero-fade className="t-body indent-k72 order-1 col-span-12 text-white/90 md:order-3 md:col-span-3 md:text-[0.95rem] md:indent-[4rem]">
+          <p data-hero-fade className="t-body indent-k72 order-1 col-span-12 max-w-md text-white/90 md:order-3 md:col-span-3 md:ml-auto md:text-[0.95rem] md:indent-[4rem]">
             Aaira Basit is a creative director who builds brands from every angle — identity, campaigns, reels and the
             systems that keep them sharp. Trained in psychology, she designs for memory, not for the feed.
           </p>

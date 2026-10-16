@@ -72,7 +72,7 @@ html.lenis body { height: auto; }
   text-transform: uppercase;
 }
 .t-section {
-  font-size: clamp(2.75rem, 8vw, 9rem);
+  font-size: clamp(2.5rem, 8vw, 9rem);
   line-height: 0.84;
   font-weight: 500;
   letter-spacing: -0.04em;
@@ -111,6 +111,12 @@ html.lenis body { height: auto; }
   text-transform: lowercase;
 }
 
+/* Size modifiers. The scale above is unlayered, so Tailwind text-* utilities can't override it. */
+.t-display.t-hero { font-size: clamp(2.25rem, 10vw, 11.5rem); }
+@media (min-width: 768px) { .t-display.t-hero { font-size: clamp(3.1rem, 9.4vw, 11.5rem); } }
+/* Section headings sitting in a narrow column on desktop */
+@media (min-width: 1024px) { .t-section.t-narrow { font-size: clamp(2.75rem, 6.4vw, 8rem); } }
+
 /* K72 "u-indent": first-line indent on paragraphs */
 .indent-k72 { text-indent: clamp(3rem, 18vw, 20rem); }
 
@@ -124,6 +130,10 @@ html.lenis body { height: auto; }
   margin-bottom: -0.06em;
 }
 .line-mask.allow-overflow { overflow: visible; }
+/* Char-split lines get headroom so the Amanation bounce isn't clipped on overshoot */
+.line-mask.is-chars { padding-top: 0.14em; margin-top: -0.14em; }
+.char-word { display: inline-block; white-space: nowrap; }
+.char { display: inline-block; will-change: transform; transform-origin: 0% 100%; }
 .line-inner {
   display: block;
   transform: translate3d(0, 110%, 0);
@@ -167,7 +177,7 @@ html.lenis body { height: auto; }
 
 .btn-thick {
   border-width: 3px;
-  font-size: clamp(1.75rem, 4.4vw, 4.75rem);
+  font-size: clamp(1.35rem, 4.4vw, 4.75rem);
   padding: 0.14em 0.55em 0.02em;
   letter-spacing: -0.035em;
   line-height: 1;
@@ -193,6 +203,14 @@ html.lenis body { height: auto; }
 .u-draw { background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size 0.6s var(--ease-expo); }
 .u-draw:hover, .group:hover .u-draw { background-size: 100% 1px; }
 
+/* Amanation outlined display type ("THE NEXT GENERATION") */
+.t-outline { color: transparent; -webkit-text-stroke: max(1.5px, 0.018em) var(--outline, #fff); }
+.theme-light, .theme-lime { --outline: #000; }
+
+/* Amanation rounded sheets & media: panels that slide/scale over the page */
+.fx-sheet { border-radius: clamp(1.25rem, 3vw, 2.75rem); overflow: clip; transform-origin: 50% 0%; }
+.rounded-media { border-radius: clamp(0.75rem, 1.4vw, 1.25rem); overflow: hidden; isolation: isolate; }
+
 /* Amanation image zoom */
 .zoom-img { transition: transform 0.35s var(--ease-zoom) 0.075s; }
 .group:hover .zoom-img { transform: scale(1.1); }
@@ -205,7 +223,7 @@ html.lenis body { height: auto; }
 .spin-slow { animation: spin-slow 9s linear infinite; }
 
 @media (prefers-reduced-motion: reduce) {
-  .line-inner { transform: none !important; }
+  .line-inner, .char { transform: none !important; }
   .clip-start { clip-path: none !important; }
   .spin-slow { animation: none; }
 }

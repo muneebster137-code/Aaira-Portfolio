@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { isLoaderDone } from "@/lib/loaderGate";
 import { useSmoothScroll } from "@/components/providers/SmoothScrollProvider";
+import ScrollFX from "@/components/motion/ScrollFX";
 
 /**
  * Remounts on every navigation (Next.js template semantics). On client
@@ -59,6 +60,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
         ))}
       </div>
       {children}
+      <ScrollFX />
     </>
   );
 }

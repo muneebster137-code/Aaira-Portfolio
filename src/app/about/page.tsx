@@ -100,7 +100,7 @@ export default function AboutPage() {
         {/* 02 Portrait & Narrative Split */}
         <section className="py-24 border-b border-white/15 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           <div className="lg:col-span-5 space-y-6">
-            <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden border border-white/15 bg-ink-raised shadow-2xl">
+            <div data-fx="rise" className="rounded-media relative aspect-[3/4] w-full border border-white/15 bg-neutral-900 shadow-2xl">
               <RevealImage
                 src="/images/aaira_portrait.jpg"
                 alt="Aaira Basit — Creative Director"
@@ -152,7 +152,7 @@ export default function AboutPage() {
             </div>
 
             {/* Quick Stats Grid */}
-            <div className="pt-6 grid grid-cols-2 sm:grid-cols-3 gap-6 border-t border-white/10">
+            <div data-fx="pop" className="pt-6 grid grid-cols-2 sm:grid-cols-3 gap-6 border-t border-white/10">
               <div>
                 <div className="t-display text-lime font-mono">04+</div>
                 <div className="t-label text-white/50 mt-1">Years Directing</div>
@@ -171,7 +171,7 @@ export default function AboutPage() {
       </div>
 
       {/* 03 High-Contrast Breakout Section (Amanation Theme-Light) */}
-      <section className="theme-light py-28 my-16 border-y border-black/10">
+      <section data-fx="sheet" className="fx-sheet theme-light py-20 md:py-28 my-16">
         <div className="gutter">
           <div className="max-w-4xl space-y-6">
             <span className="t-label text-black/60">
@@ -186,7 +186,7 @@ export default function AboutPage() {
             />
           </div>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 border-t border-black/10">
+          <div data-fx="pop" className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 border-t border-black/10">
             <div className="space-y-4">
               <div className="t-label font-mono text-black">01 / COGNITIVE LOAD</div>
               <h3 className="text-xl font-medium text-black">Information Hierarchy</h3>
@@ -264,7 +264,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div data-fx="pop" className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {certifications.map((c) => (
               <div
                 key={c.title}

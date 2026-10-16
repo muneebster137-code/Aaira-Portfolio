@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowUpRight, Plus, Minus } from "lucide-react";
 import RevealLines from "@/components/motion/RevealLines";
 import Magnetic from "@/components/motion/Magnetic";
+import { ScrollTrigger } from "@/lib/gsap";
 
 interface BrandPanel {
   id: string;
@@ -86,14 +87,14 @@ export default function ManaaqAccordion() {
           <RevealLines
             as="h2"
             lines={["MANAAQ", "HOLDINGS."]}
-            className="t-section text-white font-medium tracking-tighter"
+            className="t-section text-white font-medium tracking-tighter t-narrow"
           />
 
           <p className="t-body text-white/70 leading-relaxed">
             One parent holding company. Three distinct subsidiaries. One creative director managing visual identity, social media systems, packaging, and brand governance end-to-end.
           </p>
 
-          <div className="p-6 border border-white/15 text-xs flex flex-col gap-2">
+          <div className="rounded-2xl p-6 border border-white/15 text-xs flex flex-col gap-2">
             <span className="t-label text-lime">The Systems Advantage</span>
             <p className="text-white/60 leading-relaxed">
               Unifying production tokens, reusable typography rules, and asset libraries enables four divergent brands to launch campaigns simultaneously without aesthetic compromise.
@@ -142,49 +143,58 @@ export default function ManaaqAccordion() {
                   </div>
                 </div>
 
-                {/* Expanded Body */}
-                {isOpen && (
-                  <div className="pt-8 pb-4 flex flex-col gap-6 animate-in fade-in duration-300">
-                    <p className="t-body text-white/70 max-w-2xl">
-                      {b.descriptor}
-                    </p>
+                {/* Expanded Body — grid-rows trick gives a smooth height tween */}
+                <div
+                  className={`grid transition-[grid-template-rows,opacity] duration-700 ease-expo ${
+                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                  }`}
+                  onTransitionEnd={(e) => e.propertyName === "grid-template-rows" && ScrollTrigger.refresh()}
+                  aria-hidden={!isOpen}
+                  inert={!isOpen}
+                >
+                  <div className="min-h-0 overflow-hidden">
+                    <div className="pt-8 pb-4 flex flex-col gap-6">
+                      <p className="t-body text-white/70 max-w-2xl">
+                        {b.descriptor}
+                      </p>
 
-                    <div className="relative aspect-[16/9] w-full overflow-hidden bg-neutral-900 border border-white/15">
-                      <Image
-                        src={b.image}
-                        alt={b.name}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                      />
-                      <div className="absolute bottom-3 left-3 bg-black/80 px-3 py-1 text-[11px] font-mono text-white/80">
-                        {b.category}
+                      <div className="rounded-media relative aspect-[16/9] w-full bg-neutral-900">
+                        <Image
+                          src={b.image}
+                          alt={b.name}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                        />
+                        <div className="absolute bottom-3 left-3 rounded-full bg-black/80 px-3 py-1 text-[11px] font-mono text-white/80">
+                          {b.category}
+                        </div>
                       </div>
-                    </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono pt-2 border-t border-white/10 text-white/60">
-                      <div>
-                        <span className="text-white/40 block uppercase mb-1">Directorship Role:</span>
-                        <span className="text-white">{b.role}</span>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono pt-2 border-t border-white/10 text-white/60">
+                        <div>
+                          <span className="text-white/40 block uppercase mb-1">Directorship Role:</span>
+                          <span className="text-white">{b.role}</span>
+                        </div>
+                        <div>
+                          <span className="text-white/40 block uppercase mb-1">Scope of Execution:</span>
+                          <span className="text-white">{b.scope}</span>
+                        </div>
                       </div>
-                      <div>
-                        <span className="text-white/40 block uppercase mb-1">Scope of Execution:</span>
-                        <span className="text-white">{b.scope}</span>
-                      </div>
-                    </div>
 
-                    <div className="pt-2">
-                      <Link
-                        href={b.link}
-                        onClick={(e) => e.stopPropagation()}
-                        className="btn btn-solid inline-flex items-center gap-2"
-                      >
-                        <span>Open Portfolio</span>
-                        <ArrowUpRight className="h-3.5 w-3.5" />
-                      </Link>
+                      <div className="pt-2">
+                        <Link
+                          href={b.link}
+                          onClick={(e) => e.stopPropagation()}
+                          className="btn btn-solid inline-flex items-center gap-2"
+                        >
+                          <span>Open Portfolio</span>
+                          <ArrowUpRight className="h-3.5 w-3.5" />
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                )}
+                </div>
               </div>
             );
           })}

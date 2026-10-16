@@ -12,6 +12,10 @@ import RevealLines from "@/components/motion/RevealLines";
 import RevealImage from "@/components/motion/RevealImage";
 import Magnetic from "@/components/motion/Magnetic";
 
+// Static per-slug case studies; opt out of the dev-only instant-navigation check
+// that flags reading `params` outside <Suspense>.
+export const instant = false;
+
 export function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,
@@ -64,7 +68,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
 
         {/* 02 Large Hero Image with Parallax */}
         <div className="py-16">
-          <div className="relative aspect-[16/9] w-full overflow-hidden bg-neutral-900 border border-white/15">
+          <div data-fx="rise" className="rounded-media relative aspect-[16/9] w-full bg-neutral-900">
             <RevealImage
               src={project.heroImage}
               alt={project.title}
@@ -72,7 +76,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
               priority={true}
               sizes="100vw"
             />
-            <div className="absolute bottom-4 left-4 right-4 p-4 bg-black/80 backdrop-blur-md flex items-center justify-between text-xs uppercase tracking-wider text-white border border-white/10">
+            <div className="absolute bottom-3 left-3 right-3 rounded-full px-5 py-3 bg-black/80 backdrop-blur-md flex items-center justify-between text-xs uppercase tracking-wider text-white border border-white/10 md:bottom-4 md:left-4 md:right-4">
               <span className="text-white/60">Client:</span>
               <span className="text-lime font-bold">{project.client}</span>
             </div>
@@ -135,7 +139,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
             <div className="t-label text-white/40">4-PHASE PROTOCOL</div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div data-fx="pop" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {project.approach.map((step) => (
               <div
                 key={step.number}
@@ -203,7 +207,7 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
             <h3 className="t-section text-white font-medium">Measured Outcomes</h3>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div data-fx="pop" className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {project.outcomes.map((item) => (
               <div
                 key={item.label}

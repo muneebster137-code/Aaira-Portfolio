@@ -75,7 +75,7 @@ export default function ServicesPage() {
             <h2 className="t-section text-white font-medium">How We Collaborate</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div data-fx="pop" className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {engagementTiers.map((tier) => {
               const Icon = tier.icon;
               return (
@@ -174,7 +174,7 @@ export default function ServicesPage() {
 
                 {/* Right: Visual Preview */}
                 <div className="lg:col-span-5">
-                  <div className="relative aspect-[16/11] rounded-2xl overflow-hidden border border-white/15 bg-ink-raised shadow-xl">
+                  <div data-fx="rise" className="rounded-media relative aspect-[16/11] border border-white/15 bg-neutral-900 shadow-xl">
                     <RevealImage
                       src={s.previewImage}
                       alt={s.title}

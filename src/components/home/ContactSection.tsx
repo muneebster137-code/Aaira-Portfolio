@@ -18,7 +18,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="theme-dark gutter relative py-32 border-t border-white/15">
+    <section id="contact" className="theme-dark gutter relative py-24 md:py-32 border-t border-white/15">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
         {/* Left: Monumental Invitation */}
         <div className="lg:col-span-7 flex flex-col gap-8">
@@ -29,7 +29,8 @@ export default function ContactSection() {
           <RevealLines
             as="h2"
             lines={["HAVE AN IDEA?", "LET'S BUILD", "SOMETHING", "UNFORGETTABLE."]}
-            className="t-section text-white font-medium tracking-tighter"
+            outlineLines={[2]}
+            className="t-section text-white font-medium tracking-tighter t-narrow"
           />
 
           <p className="t-body text-white/70 max-w-xl text-lg md:text-xl font-light leading-relaxed">
@@ -65,7 +66,7 @@ export default function ContactSection() {
         </div>
 
         {/* Right: Studio Card & Quick Channels */}
-        <div className="lg:col-span-5 flex flex-col gap-8 border-t lg:border-t-0 lg:border-l border-white/15 pt-12 lg:pt-0 lg:pl-12">
+        <div data-fx="pop" className="lg:col-span-5 flex flex-col gap-8 border-t lg:border-t-0 lg:border-l border-white/15 pt-12 lg:pt-0 lg:pl-12">
           <div className="flex flex-col gap-3">
             <span className="t-label text-white/40">Studio Location</span>
             <CityClock />

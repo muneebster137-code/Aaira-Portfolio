@@ -9,7 +9,7 @@ import Magnetic from "@/components/motion/Magnetic";
 
 export default function PhilosophySection() {
   return (
-    <section className="theme-light gutter relative py-32 overflow-hidden">
+    <section data-fx="sheet" className="fx-sheet theme-light gutter relative py-24 md:py-32">
       <div className="flex flex-col lg:grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
         {/* Left Column: Headline & Manifesto */}
         <div className="lg:col-span-7 flex flex-col gap-10">
@@ -20,6 +20,7 @@ export default function PhilosophySection() {
           <RevealLines
             as="h2"
             lines={["Trained in", "Psychology.", "Executed in", "Design."]}
+            outlineLines={[2]}
             className="t-section text-black font-medium tracking-tighter"
           />
 
@@ -60,7 +61,7 @@ export default function PhilosophySection() {
 
         {/* Right Column: Editorial Portrait with RevealImage */}
         <div className="lg:col-span-5 w-full">
-          <div className="relative aspect-[3/4] w-full overflow-hidden bg-neutral-200">
+          <div data-fx="rise" className="rounded-media relative aspect-[3/4] w-full bg-neutral-200">
             <RevealImage
               src="/images/aaira_portrait.jpg"
               alt="Aaira Basit — Creative Director"
@@ -68,7 +69,7 @@ export default function PhilosophySection() {
               imgClassName="object-cover object-top"
               sizes="(max-width: 1024px) 100vw, 40vw"
             />
-            <div className="absolute bottom-4 left-4 right-4 p-4 bg-white/90 backdrop-blur-md flex items-center justify-between text-xs uppercase tracking-wider text-black">
+            <div className="absolute bottom-4 left-4 right-4 rounded-full px-5 py-3 bg-white/90 backdrop-blur-md flex items-center justify-between text-xs uppercase tracking-wider text-black">
               <span className="font-semibold">Aaira Basit</span>
               <span className="text-black/60 font-mono">Creative Director</span>
             </div>
