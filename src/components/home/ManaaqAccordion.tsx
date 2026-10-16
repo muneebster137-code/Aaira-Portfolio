@@ -7,6 +7,7 @@ import { ArrowUpRight, Plus, Minus } from "lucide-react";
 import RevealLines from "@/components/motion/RevealLines";
 import Magnetic from "@/components/motion/Magnetic";
 import { ScrollTrigger } from "@/lib/gsap";
+import { media } from "@/data/media";
 
 interface BrandPanel {
   id: string;
@@ -34,7 +35,7 @@ export default function ManaaqAccordion() {
       category: "Creative Direction & Brand Architecture",
       role: "Lead Visual Designer & Brand Architect",
       scope: "Brand Identity · Guidelines · Pitch Decks · Production Oversight",
-      image: "/images/manaaq_system_design.jpg",
+      image: media.home.holdings.manaaq,
       link: "/work/manaaq-creatives",
     },
     {
@@ -46,7 +47,7 @@ export default function ManaaqAccordion() {
       category: "Infant Apparel & E-Commerce",
       role: "Brand Identity & Content Director",
       scope: "Social Campaigns · Editorial Lookbooks · Packaging · Reels",
-      image: "/images/ellie_junior_brand.jpg",
+      image: media.home.holdings.ellieJunior,
       link: "/work/ellie-junior",
     },
     {
@@ -58,7 +59,7 @@ export default function ManaaqAccordion() {
       category: "Lifestyle Consumer Goods",
       role: "Creative Director & Packaging Designer",
       scope: "Packaging Design · Social Systems · Merchandising",
-      image: "/images/oopsies_brand.jpg",
+      image: media.home.holdings.oopsies,
       link: "/work/manaaq-creatives",
     },
     {
@@ -70,7 +71,7 @@ export default function ManaaqAccordion() {
       category: "Educational Consultancy",
       role: "Visual Communications Lead",
       scope: "Corporate Profiles · Presentation Decks · Social Media",
-      image: "/images/amigos_overseas_hero.jpg",
+      image: media.home.holdings.nhConsultants,
       link: "/work/amigos-overseas",
     },
   ];

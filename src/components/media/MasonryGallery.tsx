@@ -75,6 +75,18 @@ export default function MasonryGallery({
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
+              {item.videoUrl && (
+                <video
+                  src={item.videoUrl}
+                  poster={item.imageUrl}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+              )}
 
               {/* Gradient Vignette on hover */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300" />
@@ -126,12 +138,25 @@ export default function MasonryGallery({
             {/* Modal Image Display */}
             <div className="relative flex-1 min-h-[300px] md:min-h-[500px] bg-black flex items-center justify-center p-2">
               <div className="relative w-full h-full min-h-[350px]">
-                <Image
-                  src={selectedItem.imageUrl}
-                  alt={selectedItem.title}
-                  fill
-                  className="object-contain"
-                />
+                {selectedItem.videoUrl ? (
+                  <video
+                    src={selectedItem.videoUrl}
+                    poster={selectedItem.imageUrl}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls
+                    className="absolute inset-0 h-full w-full object-contain"
+                  />
+                ) : (
+                  <Image
+                    src={selectedItem.imageUrl}
+                    alt={selectedItem.title}
+                    fill
+                    className="object-contain"
+                  />
+                )}
               </div>
             </div>
 

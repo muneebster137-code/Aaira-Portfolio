@@ -9,6 +9,7 @@ import RevealImage from "@/components/motion/RevealImage";
 import ScrollWords from "@/components/motion/ScrollWords";
 import Magnetic from "@/components/motion/Magnetic";
 import { CityClock } from "@/components/common/Bits";
+import { media } from "@/data/media";
 
 const certifications = [
   { title: "Foundations of User Experience (UX) Design", org: "Google", year: "2024" },
@@ -102,7 +103,7 @@ export default function AboutPage() {
           <div className="lg:col-span-5 space-y-6">
             <div data-fx="rise" className="rounded-media relative aspect-[3/4] w-full border border-white/15 bg-neutral-900 shadow-2xl">
               <RevealImage
-                src="/images/aaira_portrait.jpg"
+                src={media.about.portrait}
                 alt="Aaira Basit — Creative Director"
                 className="w-full h-full"
                 data-cursor-label="Directress"

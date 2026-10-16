@@ -7,14 +7,9 @@ import { gsap } from "@/lib/gsap";
 import { entranceDelay, onLoaderDone } from "@/lib/loaderGate";
 import { CityClock } from "@/components/common/Bits";
 import Magnetic from "@/components/motion/Magnetic";
+import { media } from "@/data/media";
 
-const REEL = [
-  "/images/buda_fashion_campaign.jpg",
-  "/images/amigos_overseas_hero.jpg",
-  "/images/ellie_junior_brand.jpg",
-  "/images/manaaq_system_design.jpg",
-  "/images/oopsies_brand.jpg",
-];
+const REEL = media.home.heroReel;
 
 /**
  * K72 home: centred uppercase punchline, an inline "monitor" capsule between

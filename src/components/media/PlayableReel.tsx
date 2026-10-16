@@ -20,83 +20,42 @@ export default function PlayableReel({ reel }: PlayableReelProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const animationRef = useRef<number | null>(null);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoReady, setVideoReady] = useState(false);
 
-  // Parse duration in seconds
+  // Parse duration in seconds (fallback when the clip doesn't report one)
   const [min, sec] = reel.duration.split(":").map(Number);
   const totalSeconds = (min || 0) * 60 + (sec || 15);
 
+  // Progress bar follows the real clip; recorded .webm files sometimes lack a
+  // duration header, so fall back to the listed duration.
   useEffect(() => {
-    let currentProgress = progress;
-
-    if (isPlaying) {
-      const step = () => {
-        currentProgress += 100 / (totalSeconds * 60);
-        if (currentProgress >= 100) {
-          currentProgress = 0;
-        }
-        setProgress(currentProgress);
-        animationRef.current = requestAnimationFrame(step);
-      };
+    if (!isPlaying) return;
+    let fallback = progress;
+    const step = () => {
+      const v = videoRef.current;
+      if (v && videoReady && Number.isFinite(v.duration) && v.duration > 0) {
+        setProgress((v.currentTime / v.duration) * 100);
+      } else {
+        fallback = (fallback + 100 / (totalSeconds * 60)) % 100;
+        setProgress(fallback);
+      }
       animationRef.current = requestAnimationFrame(step);
-    } else {
-      if (animationRef.current) cancelAnimationFrame(animationRef.current);
-    }
-
+    };
+    animationRef.current = requestAnimationFrame(step);
     return () => {
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
-  }, [isPlaying, totalSeconds]);
-
-  // Dynamic canvas animation to simulate active video motion frames
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-
-    let animId: number;
-    let t = 0;
-
-    const render = () => {
-      if (isPlaying) {
-        t += 0.05;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        // Ambient fluid gradient lights simulating video lighting changes
-        const grad = ctx.createLinearGradient(
-          Math.sin(t * 0.5) * canvas.width * 0.5 + canvas.width * 0.5,
-          0,
-          canvas.width,
-          canvas.height
-        );
-        grad.addColorStop(0, "rgba(211, 253, 80, 0.15)");
-        grad.addColorStop(0.5, "rgba(0, 0, 0, 0)");
-        grad.addColorStop(1, "rgba(255, 255, 255, 0.08)");
-
-        ctx.fillStyle = grad;
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        // Film grain noise
-        const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-        const data = imgData.data;
-        for (let i = 0; i < data.length; i += 16) {
-          const noise = (Math.random() - 0.5) * 18;
-          data[i] = Math.min(255, data[i] + noise);
-          data[i + 1] = Math.min(255, data[i + 1] + noise);
-          data[i + 2] = Math.min(255, data[i + 2] + noise);
-        }
-        ctx.putImageData(imgData, 0, 0);
-      }
-      animId = requestAnimationFrame(render);
-    };
-
-    render();
-    return () => cancelAnimationFrame(animId);
-  }, [isPlaying]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isPlaying, totalSeconds, videoReady]);
 
   const togglePlay = () => {
-    setIsPlaying((prev) => !prev);
+    const v = videoRef.current;
+    const next = !isPlaying;
+    setIsPlaying(next);
+    if (!v) return;
+    if (next) v.play().catch(() => {});
+    else v.pause();
   };
 
   const handleLike = (e: React.MouseEvent) => {
@@ -115,7 +74,7 @@ export default function PlayableReel({ reel }: PlayableReelProps) {
         data-cursor="reel"
         data-cursor-label={isPlaying ? "PAUSE" : "PLAY REEL"}
       >
-        {/* Background Image Frame */}
+        {/* Poster + reel video (public/media/.../reel-N.jpg + reel-N.webm) */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <Image
             src={reel.thumbnailUrl}
@@ -125,17 +84,25 @@ export default function PlayableReel({ reel }: PlayableReelProps) {
               isPlaying ? "scale-105 filter brightness-105" : "scale-100 filter brightness-90 group-hover:scale-102"
             }`}
           />
+          {reel.videoUrl && (
+            <video
+              ref={videoRef}
+              src={reel.videoUrl}
+              poster={reel.thumbnailUrl}
+              muted={isMuted}
+              loop
+              playsInline
+              preload="metadata"
+              onLoadedData={() => setVideoReady(true)}
+              onError={() => setVideoReady(false)}
+              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
+                videoReady ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          )}
           {/* Subtle gradient vignette */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/90 pointer-events-none" />
         </div>
-
-        {/* Dynamic Motion Canvas Overlay */}
-        <canvas
-          ref={canvasRef}
-          width={340}
-          height={604}
-          className="absolute inset-0 w-full h-full pointer-events-none mix-blend-screen opacity-60"
-        />
 
         {/* Top Header Bar */}
         <div className="absolute top-0 inset-x-0 p-4 flex items-center justify-between z-20">
@@ -300,6 +267,17 @@ export default function PlayableReel({ reel }: PlayableReelProps) {
               fill
               className="object-cover"
             />
+            {reel.videoUrl && (
+              <video
+                src={reel.videoUrl}
+                poster={reel.thumbnailUrl}
+                autoPlay
+                muted={isMuted}
+                loop
+                playsInline
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            )}
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60 p-6 flex flex-col justify-between">
               <div className="flex justify-between items-center">
                 <h3 className="text-white font-bold text-lg">{reel.title}</h3>

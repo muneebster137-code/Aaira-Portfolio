@@ -6,6 +6,7 @@ import RevealLines from "@/components/motion/RevealLines";
 import RevealImage from "@/components/motion/RevealImage";
 import ScrollWords from "@/components/motion/ScrollWords";
 import Magnetic from "@/components/motion/Magnetic";
+import { media } from "@/data/media";
 
 export default function PhilosophySection() {
   return (
@@ -63,7 +64,7 @@ export default function PhilosophySection() {
         <div className="lg:col-span-5 w-full">
           <div data-fx="rise" className="rounded-media relative aspect-[3/4] w-full bg-neutral-200">
             <RevealImage
-              src="/images/aaira_portrait.jpg"
+              src={media.home.philosophyPortrait}
               alt="Aaira Basit — Creative Director"
               className="h-full w-full"
               imgClassName="object-cover object-top"

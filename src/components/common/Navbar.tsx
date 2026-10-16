@@ -9,6 +9,7 @@ import { gsap } from "@/lib/gsap";
 import { useSmoothScroll } from "@/components/providers/SmoothScrollProvider";
 import { CityClock, SocialPills, Wordmark } from "@/components/common/Bits";
 import { projects } from "@/data/projectsData";
+import { media } from "@/data/media";
 
 const NAV = [
   {
@@ -17,7 +18,7 @@ const NAV = [
     href: "/work",
     tagline: "Selected Works & Case Studies",
     count: `0${projects.length}`,
-    image: "/images/amigos_overseas_hero.jpg",
+    image: media.menu.work,
   },
   {
     num: "02",
@@ -25,7 +26,7 @@ const NAV = [
     href: "/about",
     tagline: "Creative Directress & Psychology Lead",
     count: "SZABIST",
-    image: "/images/aaira_portrait.jpg",
+    image: media.menu.about,
   },
   {
     num: "03",
@@ -33,7 +34,7 @@ const NAV = [
     href: "/services",
     tagline: "09 Disciplines & Retainer Architecture",
     count: "09 Pillars",
-    image: "/images/manaaq_system_design.jpg",
+    image: media.menu.services,
   },
   {
     num: "04",
@@ -41,7 +42,7 @@ const NAV = [
     href: "/contact",
     tagline: "Direct Project Intake & Consultation",
     count: "Open",
-    image: "/images/buda_fashion_campaign.jpg",
+    image: media.menu.contact,
   },
 ];
 

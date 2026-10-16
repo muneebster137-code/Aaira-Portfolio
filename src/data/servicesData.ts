@@ -1,3 +1,5 @@
+import { media } from "@/data/media";
+
 export interface ServicePillar {
   number: string;
   title: string;
@@ -18,7 +20,7 @@ export const servicesData: ServicePillar[] = [
       "Creating foundational visual identities that communicate authority and distinction. Every mark, typographic pairing, and chromatic choice is engineered to endure across screens, print, and physical spaces.",
     deliverables: ["Visual Identity Systems", "Logo Suites & Monograms", "Brand Books & Styleguides", "Design Tokens & Typography Rules"],
     tools: ["Illustrator", "Photoshop", "Figma"],
-    previewImage: "/images/manaaq_system_design.jpg",
+    previewImage: media.services["01"],
     accent: "#D3FD50",
   },
   {
@@ -29,7 +31,7 @@ export const servicesData: ServicePillar[] = [
       "Translating brand strategy into cohesive seasonal, product launch, or institutional campaigns. Built for maximum resonance across digital billboards, social carousels, and print touchpoints.",
     deliverables: ["Key Visuals (KV)", "Omnichannel Campaign Kits", "Event Visual Themes", "Digital & Out-of-Home Banners"],
     tools: ["Photoshop", "Illustrator", "After Effects"],
-    previewImage: "/images/buda_fashion_campaign.jpg",
+    previewImage: media.services["02"],
     accent: "#D3FD50",
   },
   {
@@ -40,7 +42,7 @@ export const servicesData: ServicePillar[] = [
       "Directing cross-functional teams and brand ecosystems. Ensuring every piece of creative output aligns with commercial objectives and artistic integrity from concept to completion.",
     deliverables: ["Creative Vision & Pitch Books", "Moodboards & Art Direction", "Production Supervision", "Multi-Brand Portfolio Cohesion"],
     tools: ["Figma", "Canva", "Notion"],
-    previewImage: "/images/amanation_hero_kinetic.jpg",
+    previewImage: media.services["03"],
     accent: "#D3FD50",
   },
   {
@@ -51,7 +53,7 @@ export const servicesData: ServicePillar[] = [
       "Tactile print executions with typographic rigor. From international education expo pavilions to fashion lookbooks and premium packaging finishes.",
     deliverables: ["Exhibition Standees & Booths", "Editorial Magazines & Lookbooks", "Packaging & Unboxing Collateral", "Corporate Brochures & Folders"],
     tools: ["InDesign", "Illustrator", "Photoshop"],
-    previewImage: "/images/ellie_junior_brand.jpg",
+    previewImage: media.services["04"],
     accent: "#D3FD50",
   },
   {
@@ -62,7 +64,7 @@ export const servicesData: ServicePillar[] = [
       "Harnessing state-of-the-art generative visual tools as an amplifier for creative throughput. Every AI-generated asset is curated, color-graded, and art-directed with exacting fidelity.",
     deliverables: ["Generative Campaign Concepts", "Short-Form Video Synthetics", "Lifestyle Mood Assets", "Visual Prototyping"],
     tools: ["Midjourney", "Runway Gen-3", "CapCut", "Photoshop"],
-    previewImage: "/images/amanation_hero_kinetic.jpg",
+    previewImage: media.services["05"],
     accent: "#D3FD50",
   },
   {
@@ -73,7 +75,7 @@ export const servicesData: ServicePillar[] = [
       "Building high-velocity content architectures. From multi-slide Instagram carousels and animated story sequences to vertical reel layouts that captivate scrolling feeds.",
     deliverables: ["Multi-Panel Carousel Systems", "Reel / TikTok Grid Templates", "Story Sequence Frameworks", "Content Calendar Art Direction"],
     tools: ["Photoshop", "Canva Pro", "CapCut"],
-    previewImage: "/images/buda_post_grid.jpg",
+    previewImage: media.services["06"],
     accent: "#D3FD50",
   },
   {
@@ -84,7 +86,7 @@ export const servicesData: ServicePillar[] = [
       "Transforming complex business propositions, metrics, and narratives into persuasive, beautifully orchestrated slide decks that close deals.",
     deliverables: ["Investor Pitch Decks", "Corporate Capabilities Profiles", "Executive Keynotes", "Interactive PDF Proposals"],
     tools: ["PowerPoint", "Google Slides", "Figma", "Keynote"],
-    previewImage: "/images/amigos_overseas_hero.jpg",
+    previewImage: media.services["07"],
     accent: "#D3FD50",
   },
   {
@@ -95,7 +97,7 @@ export const servicesData: ServicePillar[] = [
       "Applying psychological narrative pacing and emotional resonance to brand narratives. Guiding viewers through a deliberate progression of curiosity, desire, and action.",
     deliverables: ["Brand Narratives & Case Studies", "Storyboards & Shot Lists", "Content Arc Roadmaps", "Founder Journey Videos"],
     tools: ["Photoshop", "Premiere Pro", "CapCut"],
-    previewImage: "/images/aaira_portrait.jpg",
+    previewImage: media.services["08"],
     accent: "#D3FD50",
   },
   {
@@ -106,7 +108,7 @@ export const servicesData: ServicePillar[] = [
       "Engineering holistic promotional toolkits for product drops, branch openings, and campaign launches that convert interest into measurable business value.",
     deliverables: ["Launch Teaser Suites", "Ad Creatives (Static & Motion)", "Lead Gen Collateral", "Conversion-Focused Visual Assets"],
     tools: ["Photoshop", "Illustrator", "CapCut"],
-    previewImage: "/images/amigos_social_grid.jpg",
+    previewImage: media.services["09"],
     accent: "#D3FD50",
   },
 ];
