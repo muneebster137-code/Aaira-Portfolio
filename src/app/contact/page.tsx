@@ -121,7 +121,7 @@ export default function ContactPage() {
                 <span className="text-lg font-medium">Islamabad, Pakistan</span>
               </div>
               <p className="t-body text-white/60 font-light text-sm leading-relaxed">
-                I work remotely across time zones with founders in Budapest, London and Berlin and with regional holding groups, using async workflows and tight milestones.
+                I work remotely across time zones with founders in Budapest, London and Berlin and with regional multi-brand companies, using async workflows and tight milestones.
               </p>
             </div>
 

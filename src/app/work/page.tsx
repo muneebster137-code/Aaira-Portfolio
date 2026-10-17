@@ -72,7 +72,7 @@ export default function WorkArchivePage() {
           />
 
           <p className="t-body max-w-2xl text-white/70 mt-6 leading-relaxed">
-            Brands, campaigns and systems I&apos;ve built end to end, across international consultancy, fashion runways and a multi-brand holding group.
+            Brands, campaigns and systems I&apos;ve built end to end, across international consultancy, fashion runways and a multi-brand creative studio.
           </p>
 
           {/* Filter Chips Bar (K72 Pill Style) */}
@@ -100,25 +100,30 @@ export default function WorkArchivePage() {
           {filteredProjects.map((project, idx) => {
             const hasReel = project.reels && project.reels.length > 0;
             const isReelOpen = activeReelId === project.id;
-            const isOffset = idx % 2 === 1;
+            // Flagship cards span both columns; the rest alternate their offset.
+            const flagshipsBefore = filteredProjects.slice(0, idx).filter((p) => p.flagship).length;
+            const isOffset = !project.flagship && (idx - flagshipsBefore) % 2 === 1;
 
             return (
               <article
                 key={project.id}
                 className={`group relative flex flex-col justify-between ${
-                  isOffset ? "md:pt-16" : ""
+                  project.flagship ? "md:col-span-2" : isOffset ? "md:pt-16" : ""
                 }`}
               >
                 {/* Meta Header */}
                 <div className="flex items-center justify-between pb-3 text-xs uppercase tracking-wider text-white/50 border-b border-white/10 mb-4">
-                  <span className="text-lime font-mono font-medium">0{idx + 1} / {project.client}</span>
+                  <span className="text-lime font-mono font-medium">
+                    0{idx + 1} / {project.client}
+                    {project.flagship && <span className="ml-3 rounded-full bg-lime px-2 py-0.5 text-black">Flagship</span>}
+                  </span>
                   <span>{project.year}</span>
                 </div>
 
                 {/* Media Container */}
                 <div
                   data-fx="rise"
-                  className="rounded-media relative aspect-[4/3] w-full bg-neutral-900"
+                  className={`rounded-media relative w-full bg-neutral-900 ${project.flagship ? "aspect-[4/3] md:aspect-[21/9]" : "aspect-[4/3]"}`}
                 >
                   {isReelOpen && project.reels[0] ? (
                     <div className="relative h-full w-full bg-black p-4 flex items-center justify-center">

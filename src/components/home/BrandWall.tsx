@@ -16,7 +16,7 @@ export default function BrandWall() {
   const row1: BrandItem[] = [
     { name: "AMIGOS OVERSEAS", category: "Global Higher Education & Visa Consultancy", market: "Worldwide" },
     { name: "BUDA FASHION", category: "High-Fashion Streetwear & Runway Brand", market: "Budapest, Hungary" },
-    { name: "MANAAQ CREATIVES", category: "Multi-Brand Creative Holding Group", market: "Hybrid" },
+    { name: "MANAAQ CREATIVE STUDIOS", category: "Multi-Brand Creative Studio", market: "Hybrid" },
     { name: "ELLIE JUNIOR", category: "Sustainable Scandinavian Toddler Apparel", market: "Global E-Commerce" },
   ];
 

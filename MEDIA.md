@@ -5,7 +5,7 @@ replace that file with a new one that has **exactly the same name and extension*
 
 ```
 public/media/
-  home/       hero slideshow, philosophy portrait, Manaaq holdings panels
+  home/       hero background + pill slideshow, philosophy portrait, Manaaq Creative Studios brand panels
   menu/       full-screen menu hover previews
   about/      about page portrait
   services/   one image per discipline
@@ -48,12 +48,13 @@ Add the entry in both, drop the file into `public/media/...`, then run `npm run 
 
 | File | Where it shows | Best size |
 |---|---|---|
-| `hero-1.jpg` … `hero-5.jpg` | Hero background slideshow and the pill inside "PEOPLE ◯ CAN'T", in that order | 16:9, 2400×1350 |
+| `hero-background.jpg` | Full-size photo behind the whole hero (darkened automatically). Pick a photo without a big logo or text in the middle | 16:9, 2400×1350 |
+| `hero-1.jpg` … `hero-5.jpg` | The image pill inside "PEOPLE ◯ CAN'T", in that order | 16:9, 1600×900 |
 | `philosophy-portrait.jpg` | Portrait in the white "Trained in psychology" section | 3:4, 1200×1600 |
-| `holdings-manaaq.jpg` | Manaaq Holdings accordion → Manaaq Creatives | 16:9, 1600×900 |
-| `holdings-ellie-junior.jpg` | Manaaq Holdings accordion → Ellie Junior | 16:9, 1600×900 |
-| `holdings-oopsies.jpg` | Manaaq Holdings accordion → Oopsies | 16:9, 1600×900 |
-| `holdings-nh-consultants.jpg` | Manaaq Holdings accordion → NH Consultants | 16:9, 1600×900 |
+| `brands-manaaq.jpg` | Manaaq Creative Studios accordion → Manaaq Creative Studios | 16:9, 1600×900 |
+| `brands-ellie-junior.jpg` | Manaaq Creative Studios accordion → Ellie Junior | 16:9, 1600×900 |
+| `brands-oopsies.jpg` | Manaaq Creative Studios accordion → Oopsies | 16:9, 1600×900 |
+| `brands-nh-consultants.jpg` | Manaaq Creative Studios accordion → NH Consultants | 16:9, 1600×900 |
 
 ### Menu: `public/media/menu/`
 
@@ -92,6 +93,25 @@ Each image appears on the /services page row **and** as the hover preview in the
 |---|---|---|
 | `aaira-basit-resume.pdf` | "Download PDF" button on /resume | Must be a real `.pdf`. The /resume page text lives in `src/app/resume/page.tsx`; update both together. |
 
+## Anebos Studios (flagship): `public/media/work/anebos-studios/`
+
+`hero.jpg` is the studio cover (top of /work/anebos-studios and the full-width flagship card on Home and /work), 16:9, 2400×1350.
+
+Each brand has its own folder: `anebos-studios/`, `homeloom/`, `treats-for-life/`. Inside, every category is numbered. Replace a file to change it; to show **more** pieces in a category, add the next number (e.g. `posts-4.jpg`) and raise that brand's count in `src/data/media.ts` (`studioBrand(...)`).
+
+| File(s) | Section on the page | Best size |
+|---|---|---|
+| `logo-1.jpg`, `logo-2.jpg` | Logo Design | 1:1, 1200×1200 |
+| `identity-1.jpg`, `identity-2.jpg` | Brand Identity | 4:3, 1600×1200 |
+| `guidelines-1.jpg`, `guidelines-2.jpg` | Brand Guidelines | 3:2, 1800×1200 |
+| `posts-1.jpg` … `posts-3.jpg` | Social Media Posts | 4:5, 1080×1350 |
+| `carousel-1.jpg` … `carousel-3.jpg` | Carousel Designs (shown as slides 1/3, 2/3, 3/3) | 4:5, 1080×1350 |
+| `reel-1.webm` + `reel-1.jpg`, `reel-2.webm` + `reel-2.jpg` | Reel Designs (`.jpg` is the poster) | 9:16, 1080×1920 |
+| `marketing-1.jpg`, `marketing-2.jpg` | Marketing Creatives | 3:4, 1200×1600 |
+| `other-1.jpg`, `other-2.jpg` | Other Brand Assets (**anebos-studios/ only**) | 4:3, 1600×1200 |
+
+The files there now are dark wireframe placeholders marked "placeholder"; replace them with the real work.
+
 ## Case studies
 
 ### Amigos Overseas: `public/media/work/amigos-overseas/`
@@ -124,7 +144,7 @@ Each image appears on the /services page row **and** as the hover preview in the
 | `gallery-3.jpg` | Showcase tile: "Kinetic Sculpture & Spatial Concept" | 16:9 wide, 1920×1080 |
 | `gallery-4.jpg` | Showcase tile: "Minimalist Brand Stationery" | 3:2 landscape, 1800×1200 |
 
-### Manaaq Creatives: `public/media/work/manaaq-creatives/`
+### Manaaq Creative Studios: `public/media/work/manaaq-creatives/`
 
 | File | Where it shows | Best size |
 |---|---|---|
@@ -149,6 +169,10 @@ Each image appears on the /services page row **and** as the hover preview in the
 | `gallery-1.jpg` | Showcase tile: "Spring Lookbook Spread" | 4:3 landscape, 1600×1200 |
 | `gallery-2.jpg` | Showcase tile: "Creative Studio Identity" | 3:2 landscape, 1800×1200 |
 | `gallery-3.jpg` | Showcase tile: "Kids Lifestyle Packaging" | 1:1 square, 1080×1080 |
+| `newsletter-1.jpg` | Newsletter Designs: featured full-length issue "Monthly Newsletter" (scrolls inside an email frame) | 1200px wide, any height (full email) |
+| `newsletter-2.jpg` | Newsletter Designs: mockup "New Collection Launch" | 3:4, 1200×1600 |
+| `newsletter-3.jpg` | Newsletter Designs: mockup "Seasonal Edit" | 3:4, 1200×1600 |
+| `newsletter-4.jpg` | Newsletter Designs: mockup "Parent Tips" | 3:4, 1200×1600 |
 
 ### Oopsies: `public/media/work/oopsies/`
 

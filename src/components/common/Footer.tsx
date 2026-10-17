@@ -40,7 +40,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-3 flex flex-col gap-4">
             <Wordmark />
             <p className="text-white/40 normal-case leading-relaxed font-light text-xs max-w-xs mt-2">
-              I&apos;m a creative director & visual designer building brands people can&apos;t forget.
+              I&apos;m a Creative Director building brands people can&apos;t forget.
             </p>
           </div>
 

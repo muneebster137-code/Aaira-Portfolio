@@ -8,6 +8,7 @@ import { projects } from "@/data/projectsData";
 import PlayableReel from "@/components/media/PlayableReel";
 import PostDesignCarousel from "@/components/media/PostDesignCarousel";
 import MasonryGallery from "@/components/media/MasonryGallery";
+import NewsletterShowcase from "@/components/media/NewsletterShowcase";
 import RevealLines from "@/components/motion/RevealLines";
 import RevealImage from "@/components/motion/RevealImage";
 import Magnetic from "@/components/motion/Magnetic";
@@ -17,7 +18,7 @@ import Magnetic from "@/components/motion/Magnetic";
 export const instant = false;
 
 export function generateStaticParams() {
-  return projects.map((project) => ({
+  return projects.filter((project) => !project.customPage).map((project) => ({
     slug: project.slug,
   }));
 }
@@ -28,7 +29,7 @@ interface CaseStudyProps {
 
 export default async function CaseStudyPage({ params }: CaseStudyProps) {
   const { slug } = await params;
-  const project = projects.find((p) => p.slug === slug);
+  const project = projects.find((p) => p.slug === slug && !p.customPage);
 
   if (!project) {
     notFound();
@@ -188,6 +189,13 @@ export default async function CaseStudyPage({ params }: CaseStudyProps) {
               slides={project.postSlides}
               projectName={project.title}
             />
+          </section>
+        )}
+
+        {/* 07b Newsletter Designs */}
+        {project.newsletters && project.newsletters.length > 0 && (
+          <section className="py-24 border-t border-white/15">
+            <NewsletterShowcase items={project.newsletters} brand={project.title} />
           </section>
         )}
 

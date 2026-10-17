@@ -13,11 +13,11 @@ const display = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Aaira Basit — Creative Director & Visual Designer",
+  title: "Aaira Basit — Creative Director",
   description:
-    "Creative Director & Visual Designer building brands, campaigns and visual systems that people remember. Brand identity, print, social reels and AI-assisted creative. Based in Islamabad.",
+    "Creative Director building brands, campaigns and visual systems that people remember. Brand identity, print, social reels and AI-assisted creative. Based in Islamabad.",
   openGraph: {
-    title: "Aaira Basit — Creative Director & Visual Designer",
+    title: "Aaira Basit — Creative Director",
     description: "Design people can't forget. Brand identity, campaigns, reels and visual systems.",
     type: "website",
   },

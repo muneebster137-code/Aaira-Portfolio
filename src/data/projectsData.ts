@@ -38,6 +38,13 @@ export interface MasonryMediaItem {
   type: "reel" | "post" | "brand-identity" | "print" | "mockup";
 }
 
+export interface NewsletterDesign {
+  id: string;
+  title: string;
+  caption: string;
+  imageUrl: string;
+}
+
 export interface Project {
   id: string;
   slug: string;
@@ -61,6 +68,8 @@ export interface Project {
   reels: ProjectReel[];
   postSlides: PostDesignSlide[];
   masonryGallery: MasonryMediaItem[];
+  /** Optional "Newsletter Designs" section; the first item is shown full-length */
+  newsletters?: NewsletterDesign[];
   outcomes: {
     label: string;
     metric: string;
@@ -68,9 +77,39 @@ export interface Project {
   }[];
   nextProjectSlug: string;
   nextProjectTitle: string;
+  /** Shown full-width as the first card on Home and /work */
+  flagship?: boolean;
+  /** Has its own route under app/work/<slug>; skipped by the generic case-study page */
+  customPage?: boolean;
 }
 
 export const projects: Project[] = [
+  {
+    id: "00",
+    slug: "anebos-studios",
+    title: "Anebos Studios",
+    client: "Anebos Studios",
+    category: "Creative Studio · 3 Brands",
+    year: "2024 – 2025",
+    role: "Co-Founder & Creative Director",
+    scope: ["Brand Identity", "Logo Design", "Brand Guidelines", "Social Systems", "Marketing Creatives"],
+    tools: ["Illustrator", "Photoshop", "InDesign", "Figma", "Premiere Pro", "After Effects", "Canva", "CapCut"],
+    tagline: "The creative studio I co-founded, and the brands we built under it: Homeloom and Treats For Life.",
+    overview:
+      "Anebos Studios is a creative studio I co-founded to offer branding, design and marketing to founders and growing businesses.",
+    challenge: "",
+    approach: [],
+    heroImage: media.work["anebos-studios"].hero,
+    featuredAspect: "16:9",
+    reels: [],
+    postSlides: [],
+    masonryGallery: [],
+    outcomes: [],
+    nextProjectSlug: "amigos-overseas",
+    nextProjectTitle: "Amigos Overseas",
+    flagship: true,
+    customPage: true,
+  },
   {
     id: "01",
     slug: "amigos-overseas",
@@ -230,7 +269,7 @@ export const projects: Project[] = [
     client: "Buda Fashion Startup",
     category: "Fashion & Runway (Hungary)",
     year: "2025",
-    role: "Creative Designer & Marketing Associate",
+    role: "Creative Director & Marketing Associate",
     scope: ["Campaign Visuals", "Social Content", "Fashion Show Storytelling", "Poster Design"],
     tools: ["Photoshop", "Illustrator", "Canva", "AI Visual Synthesis"],
     tagline: "A young Hungarian fashion label with visuals carrying the mood before garments even hit the runway.",
@@ -373,21 +412,21 @@ export const projects: Project[] = [
       { label: "Runway Coverage", metric: "6", detail: "European fashion blog features and press inclusions" },
     ],
     nextProjectSlug: "manaaq-creatives",
-    nextProjectTitle: "Manaaq Creatives",
+    nextProjectTitle: "Manaaq Creative Studios",
   },
   {
     id: "03",
     slug: "manaaq-creatives",
-    title: "Manaaq Creatives",
-    client: "Manaaq Umbrella Group",
+    title: "Manaaq Creative Studios",
+    client: "Manaaq Creative Studios",
     category: "Brand Architecture · 4 Brands",
     year: "2024 – Current",
-    role: "Lead Visual Designer & Brand Architect",
+    role: "Creative Director",
     scope: ["Brand Identity", "Design Systems", "Social Media", "AI Creative Production", "Print"],
     tools: ["Photoshop", "Illustrator", "Canva", "CapCut", "Figma", "PowerPoint"],
-    tagline: "One parent company. Three distinct subsidiaries. One creative lead managing the entire visual universe.",
+    tagline: "One creative studio. Three brands under it. One Creative Director running the entire visual universe.",
     overview:
-      "Manaaq Creatives is a multi-disciplinary holding entity directing multiple consumer and professional brands. Acting as the sole creative lead, I formulated and sustained the complete design ecosystems for the parent company and its three sub-brands: Ellie Junior (infant lifestyle), Oopsies (youth lifestyle), and NH Consultants (educational advising).",
+      "Manaaq Creative Studios is a multi-disciplinary creative studio behind several consumer and professional brands. As its Creative Director, I built and run the complete design ecosystems for the studio and its three brands: Ellie Junior (infant lifestyle), Oopsies (youth lifestyle), and NH Consultants (educational advising).",
     challenge:
       "Four separate brands with divergent audiences, aesthetics, and tones of voice required continuous daily asset generation without hiring an entire agency department. The challenge was maintaining absolute individuality for each brand while establishing a singular, hyper-efficient production machine behind the scenes.",
     approach: [
@@ -425,7 +464,7 @@ export const projects: Project[] = [
         duration: "0:30",
         views: "89.1K",
         caption: "Inside Manaaq: Four brands, singular architectural vision. From identity to product.",
-        tags: ["#BrandArchitecture", "#CreativeDirection", "#ManaaqCreatives"],
+        tags: ["#BrandArchitecture", "#CreativeDirection", "#ManaaqCreativeStudios"],
         thumbnailUrl: media.work["manaaq-creatives"].reels[0].poster,
         videoUrl: media.work["manaaq-creatives"].reels[0].video,
         videoStyle: "minimal",
@@ -518,10 +557,10 @@ export const projects: Project[] = [
     id: "04",
     slug: "ellie-junior",
     title: "Ellie Junior",
-    client: "Ellie Junior (Manaaq Group)",
+    client: "Ellie Junior (Manaaq Creative Studios)",
     category: "Toddler Apparel & Baby Lifestyle",
     year: "2024 – 2025",
-    role: "Brand Identity & Content Director",
+    role: "Creative Director",
     scope: ["Social Campaigns", "Packaging Design", "Lookbook Editorial", "AI Creative Production"],
     tools: ["Photoshop", "Illustrator", "Canva", "AI Image Generation"],
     tagline: "Soft, trustworthy Scandinavian visuals designed for parents scrolling fast.",
@@ -625,6 +664,32 @@ export const projects: Project[] = [
         type: "mockup",
       },
     ],
+    newsletters: [
+      {
+        id: "ellie-nl-1",
+        title: "Monthly Newsletter",
+        caption: "A full issue: new arrivals, care tips for organic fabrics and a soft call to shop, laid out for quick reading on a phone.",
+        imageUrl: media.work["ellie-junior"].newsletters[0],
+      },
+      {
+        id: "ellie-nl-2",
+        title: "New Collection Launch",
+        caption: "Launch email introducing a new collection.",
+        imageUrl: media.work["ellie-junior"].newsletters[1],
+      },
+      {
+        id: "ellie-nl-3",
+        title: "Seasonal Edit",
+        caption: "Seasonal picks styled around the nursery.",
+        imageUrl: media.work["ellie-junior"].newsletters[2],
+      },
+      {
+        id: "ellie-nl-4",
+        title: "Parent Tips",
+        caption: "Helpful content issue that keeps parents opening between launches.",
+        imageUrl: media.work["ellie-junior"].newsletters[3],
+      },
+    ],
     outcomes: [
       { label: "Lookbook Views", metric: "45K+", detail: "Digital catalog reads during launch month" },
       { label: "ROAS Increase", metric: "2.4x", detail: "Return on ad spend across social campaign sets" },
@@ -637,17 +702,17 @@ export const projects: Project[] = [
     id: "05",
     slug: "oopsies",
     title: "Oopsies",
-    client: "Oopsies (Manaaq Group)",
+    client: "Oopsies (Manaaq Creative Studios)",
     category: "Youth Lifestyle Goods · A Manaaq Brand",
     year: "2024 – Current",
-    role: "Creative Director & Packaging Designer",
+    role: "Creative Director",
     scope: ["Brand Identity", "Social Systems", "Packaging Design", "Merchandising"],
     tools: ["Photoshop", "Illustrator", "Canva", "CapCut", "AI Image Generation"],
     tagline: "A subsidiary brand with a look of its own.",
     overview:
-      "Oopsies is a youth lifestyle brand under the Manaaq group, selling playful accessories, packaging-led products and stationery. I'm its creative lead: I built the visual identity, design the packaging and run the social feed, alongside the other Manaaq brands.",
+      "Oopsies is a youth lifestyle brand under Manaaq Creative Studios, selling playful accessories, packaging-led products and stationery. I'm its creative lead: I built the visual identity, design the packaging and run the social feed, alongside the other Manaaq brands.",
     challenge:
-      "Oopsies shares a parent company, a production system and a designer with three other brands, yet it speaks to a much younger, louder audience. It had to feel bold and fun on its own terms without ever being mistaken for Manaaq, Ellie Junior or NH Consultants.",
+      "Oopsies shares a parent company, a production system and a Creative Director with three other brands, yet it speaks to a much younger, louder audience. It had to feel bold and fun on its own terms without ever being mistaken for Manaaq, Ellie Junior or NH Consultants.",
     approach: [
       {
         number: "01",
@@ -683,7 +748,7 @@ export const projects: Project[] = [
         duration: "0:06",
         views: "",
         caption: "Short-form product reel built for the Oopsies feed.",
-        tags: ["#Oopsies", "#ManaaqGroup", "#ProductReel"],
+        tags: ["#Oopsies", "#ManaaqCreativeStudios", "#ProductReel"],
         thumbnailUrl: media.work.oopsies.reels[0].poster,
         videoUrl: media.work.oopsies.reels[0].video,
         videoStyle: "studio",
@@ -766,15 +831,15 @@ export const projects: Project[] = [
     id: "06",
     slug: "nh-consultants",
     title: "NH Consultants",
-    client: "NH Consultants (Manaaq Group)",
+    client: "NH Consultants (Manaaq Creative Studios)",
     category: "Overseas Educational Consultancy",
     year: "2024 – Current",
-    role: "Visual Communications Lead",
+    role: "Creative Director",
     scope: ["Social Systems", "Presentations", "Corporate Profiles", "Brand Identity"],
     tools: ["Photoshop", "Illustrator", "Canva", "PowerPoint"],
     tagline: "Clear, credible design for families making a big decision.",
     overview:
-      "NH Consultants is an overseas educational consultancy in the Manaaq group, guiding students and their families through studying abroad. I lead its visual communication: the social feed, presentation decks and the corporate profile that introduces the firm.",
+      "NH Consultants is an overseas educational consultancy under Manaaq Creative Studios, guiding students and their families through studying abroad. I lead its visual communication: the social feed, presentation decks and the corporate profile that introduces the firm.",
     challenge:
       "Choosing to study abroad is a big, expensive decision, and families need to trust the consultancy before they read a word. The design had to feel calm, clear and credible, while the feed kept up with deadlines and policy updates every week.",
     approach: [
@@ -812,7 +877,7 @@ export const projects: Project[] = [
         duration: "0:06",
         views: "",
         caption: "Short explainer reel for students and families planning to study abroad.",
-        tags: ["#NHConsultants", "#StudyAbroad", "#ManaaqGroup"],
+        tags: ["#NHConsultants", "#StudyAbroad", "#ManaaqCreativeStudios"],
         thumbnailUrl: media.work["nh-consultants"].reels[0].poster,
         videoUrl: media.work["nh-consultants"].reels[0].video,
         videoStyle: "education",
@@ -888,8 +953,8 @@ export const projects: Project[] = [
       { label: "Brands on One System", metric: "4", detail: "NH shares one production system with the other Manaaq brands" },
       { label: "Formats", metric: "3", detail: "Social posts, presentation decks and a corporate profile" },
     ],
-    nextProjectSlug: "amigos-overseas",
-    nextProjectTitle: "Amigos Overseas",
+    nextProjectSlug: "anebos-studios",
+    nextProjectTitle: "Anebos Studios",
   },
 ];
 
@@ -907,12 +972,5 @@ export const earlierProjects = [
     year: "2024",
     description: "Supported brand identity initiatives, digital campaign collateral, and market research property.",
     tags: ["Digital Campaigns", "Brand Strategy", "Research"],
-  },
-  {
-    title: "Anebos Studios",
-    role: "COO / Founder",
-    year: "2024 – 2025",
-    description: "Founded and operated a boutique creative studio specializing in corporate branding and marketing solutions.",
-    tags: ["Studio Management", "Operations", "Creative Strategy"],
   },
 ];

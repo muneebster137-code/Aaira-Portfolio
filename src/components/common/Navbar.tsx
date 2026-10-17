@@ -203,7 +203,7 @@ export default function Navbar() {
           <div data-menu-fade className="t-label hidden md:flex items-center gap-3 text-white/50">
             <span>ISLAMABAD · GLOBAL REMOTE</span>
             <span>✺</span>
-            <span className="text-lime">CREATIVE DIRECTRESS</span>
+            <span className="text-lime">CREATIVE DIRECTOR</span>
           </div>
 
           <button

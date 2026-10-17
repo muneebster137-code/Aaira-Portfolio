@@ -23,7 +23,7 @@ export default function HomePage() {
       {/* 03 High-Contrast Philosophy Breakout (Theme Light) */}
       <PhilosophySection />
 
-      {/* 04 Manaaq Creatives 4-Brand Ecosystem */}
+      {/* 04 Manaaq Creative Studios 4-Brand Ecosystem */}
       <ManaaqAccordion />
 
       {/* 05 Creative Disciplines & Floating Image Matrix */}

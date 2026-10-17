@@ -65,7 +65,7 @@ html.lenis body { height: auto; }
    Type scale
    ========================================================================== */
 .t-display {
-  font-size: clamp(3.25rem, 9.6vw, 12rem);
+  font-size: clamp(2.75rem, 9.6vw, 12rem);
   line-height: 0.82;
   font-weight: 500;
   letter-spacing: -0.04em;

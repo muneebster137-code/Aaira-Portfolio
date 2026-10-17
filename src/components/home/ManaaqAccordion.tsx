@@ -29,13 +29,13 @@ export default function ManaaqAccordion() {
     {
       id: "manaaq",
       num: "01",
-      name: "Manaaq Creatives",
-      tagline: "The Core Umbrella Holding Entity",
-      descriptor: "Minimalist corporate architecture, luxury brand guidelines, and multi-brand creative governance across all holdings.",
+      name: "Manaaq Creative Studios",
+      tagline: "The Parent Creative Studio",
+      descriptor: "Minimalist corporate architecture, luxury brand guidelines, and multi-brand creative governance across every brand in the studio.",
       category: "Creative Direction & Brand Architecture",
-      role: "Lead Visual Designer & Brand Architect",
+      role: "Creative Director",
       scope: "Brand Identity · Guidelines · Pitch Decks · Production Oversight",
-      image: media.home.holdings.manaaq,
+      image: media.home.brands.manaaq,
       link: "/work/manaaq-creatives",
     },
     {
@@ -45,9 +45,9 @@ export default function ManaaqAccordion() {
       tagline: "Sustainable Toddler & Baby Lifestyle",
       descriptor: "Soft, trustworthy Scandinavian visuals engineered for parents scrolling high-velocity digital feeds.",
       category: "Infant Apparel & E-Commerce",
-      role: "Brand Identity & Content Director",
+      role: "Creative Director",
       scope: "Social Campaigns · Editorial Lookbooks · Packaging · Reels",
-      image: media.home.holdings.ellieJunior,
+      image: media.home.brands.ellieJunior,
       link: "/work/ellie-junior",
     },
     {
@@ -57,9 +57,9 @@ export default function ManaaqAccordion() {
       tagline: "Vibrant Youth & Lifestyle Goods",
       descriptor: "Playful ceramic accessories, skincare packaging, and joyful stationery with a bold subcultural voice.",
       category: "Lifestyle Consumer Goods",
-      role: "Creative Director & Packaging Designer",
+      role: "Creative Director",
       scope: "Packaging Design · Social Systems · Merchandising",
-      image: media.home.holdings.oopsies,
+      image: media.home.brands.oopsies,
       link: "/work/oopsies",
     },
     {
@@ -69,9 +69,9 @@ export default function ManaaqAccordion() {
       tagline: "Global Academic Advisory",
       descriptor: "Clear, credible, authoritative visual design for students and families making major life decisions.",
       category: "Educational Consultancy",
-      role: "Visual Communications Lead",
+      role: "Creative Director",
       scope: "Corporate Profiles · Presentation Decks · Social Media",
-      image: media.home.holdings.nhConsultants,
+      image: media.home.brands.nhConsultants,
       link: "/work/nh-consultants",
     },
   ];
@@ -82,17 +82,17 @@ export default function ManaaqAccordion() {
         {/* Left Column: Sticky Title & Strategy Statement */}
         <div className="lg:col-span-5 lg:sticky lg:top-32 self-start flex flex-col gap-6">
           <div className="t-label text-lime">
-            03 / HOLDINGS [傘下企業]
+            03 / THE MANAAQ BRANDS [傘下企業]
           </div>
 
           <RevealLines
             as="h2"
-            lines={["MANAAQ", "HOLDINGS."]}
+            lines={["MANAAQ", "CREATIVE", "STUDIOS."]}
             className="t-section text-white font-medium tracking-tighter t-narrow"
           />
 
           <p className="t-body text-white/70 leading-relaxed">
-            One parent company. Three brands under it. I&apos;m the one creative lead behind all of them, handling visual identity, social media systems, packaging and day-to-day brand management.
+            One creative studio. Three brands under it. I&apos;m the one creative lead behind all of them, handling visual identity, social media systems, packaging and day-to-day brand management.
           </p>
 
           <div className="rounded-2xl p-6 border border-white/15 text-xs flex flex-col gap-2">

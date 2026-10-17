@@ -11,11 +11,24 @@ import { media } from "@/data/media";
 
 export const metadata: Metadata = {
   title: "Resume | Aaira Basit",
-  description: "Experience, education, skills and certifications of Aaira Basit, creative director and visual designer.",
+  description: "Experience, education, skills and certifications of Aaira Basit, Creative Director.",
 };
 
-// Mirrors public/media/resume/aaira-basit-resume.pdf; update both together.
+// Keep in step with public/media/resume/aaira-basit-resume.pdf (the downloadable copy).
 const experience = [
+  {
+    role: "Creative Director",
+    company: "Manaaq Creative Studios",
+    mode: "Islamabad · Hybrid",
+    dates: "2024 – Present",
+    current: true,
+    points: [
+      "Lead the creative direction of Manaaq Creative Studios and the brands under it.",
+      "Built and run the visual identity, social media and content for Ellie Junior, Oopsies and NH Consultants, plus other Manaaq brands as needed.",
+      "Own brand guidelines, packaging, campaign creatives, reels and pitch decks from concept to delivery.",
+      "Run every brand on one shared production system, so each keeps its own look while campaigns ship on time.",
+    ],
+  },
   {
     role: "Executive Assistant (Design & Operations)",
     company: "Amigos Overseas Education",
@@ -32,7 +45,7 @@ const experience = [
     ],
   },
   {
-    role: "COO / Founder",
+    role: "Co-Founder & Creative Director",
     company: "Anebos Studios",
     mode: "Remote / Hybrid",
     dates: "Dec 2024 – Dec 2025",
@@ -43,7 +56,7 @@ const experience = [
     ],
   },
   {
-    role: "Creative Designer & Marketing Associate",
+    role: "Creative Director & Marketing Associate",
     company: "Buda Fashion (startup brand), Hungary",
     mode: "Part time, Remote",
     dates: "Apr 2025 – Aug 2025",
@@ -89,17 +102,21 @@ const skills = [
     ],
   },
   {
-    group: "Tools",
+    group: "Software",
     items: [
-      "Adobe Photoshop",
       "Adobe Illustrator",
+      "Adobe Photoshop",
+      "Adobe InDesign",
+      "Figma",
+      "Adobe Premiere Pro",
+      "Adobe After Effects",
       "Canva",
       "CapCut",
-      "Figma (basic)",
-      "PowerPoint, Word, Excel",
-      "Google Workspace",
-      "Zoom & social platforms",
     ],
+  },
+  {
+    group: "Workplace Tools",
+    items: ["PowerPoint, Word, Excel", "Google Workspace", "Zoom & social platforms"],
   },
   {
     group: "Professional",
@@ -189,7 +206,7 @@ export default function ResumePage() {
 
         <Row label="01 / Summary">
           <p className="t-lead max-w-4xl font-light leading-snug text-white/85">
-            I&apos;m a detail-oriented visual communications designer working across graphic design, branding, content
+            I&apos;m a detail-oriented Creative Director working across graphic design, branding, content
             and digital marketing. I design for social media, presentations, campaigns and brand identities, often for
             several channels at once. I do my best work in fast-growing teams with real deadlines, and I care about
             design storytelling, how people engage, and where digital trends are heading.
@@ -201,7 +218,14 @@ export default function ResumePage() {
             {experience.map((job) => (
               <article key={job.role + job.company} className="py-8 first:pt-0 last:pb-0">
                 <div className="flex flex-col justify-between gap-2 md:flex-row md:items-baseline">
-                  <h2 className="text-2xl font-medium tracking-tight text-white md:text-3xl">{job.role}</h2>
+                  <h2 className="text-2xl font-medium tracking-tight text-white md:text-3xl">
+                    {job.role}
+                    {"current" in job && job.current && (
+                      <span className="t-label ml-3 inline-block translate-y-[-0.3em] rounded-full bg-lime px-2.5 py-1 align-middle text-black">
+                        Current
+                      </span>
+                    )}
+                  </h2>
                   <span className="t-label shrink-0 font-mono text-lime">{job.dates}</span>
                 </div>
                 <div className="t-label mt-2 text-white/50">
@@ -225,7 +249,7 @@ export default function ResumePage() {
             <h2 className="text-2xl font-medium tracking-tight text-white md:text-3xl">
               BSc Social Sciences (Psychology)
             </h2>
-            <span className="t-label shrink-0 font-mono text-lime">Nov 2023 – Jul 2026</span>
+            <span className="t-label shrink-0 font-mono text-lime">2023 – 2026 · Graduated</span>
           </div>
           <div className="t-label mt-2 text-white/50">SZABIST, Islamabad</div>
         </Row>

@@ -27,14 +27,16 @@ export default function SelectedWorkSection() {
         </div>
 
         <p className="t-body max-w-md text-white/60">
-          The brands I&apos;ve built end to end, from international higher education and European runway fashion to a multi-brand holding group and its family of labels.
+          The brands I&apos;ve built end to end, from international higher education and European runway fashion to a multi-brand creative studio and its family of labels.
         </p>
       </div>
 
       {/* Asymmetric 2-Column Elastic List */}
       <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24 items-start">
         {projects.map((project, idx) => {
-          const isOffset = idx % 2 === 1;
+          // Flagship cards span both columns; the rest alternate their offset.
+          const flagshipsBefore = projects.slice(0, idx).filter((p) => p.flagship).length;
+          const isOffset = !project.flagship && (idx - flagshipsBefore) % 2 === 1;
           const isReelOpen = activeReelProject === project.id;
           const hasReel = project.reels && project.reels.length > 0;
 
@@ -42,19 +44,22 @@ export default function SelectedWorkSection() {
             <article
               key={project.id}
               className={`group relative flex flex-col justify-between ${
-                isOffset ? "md:pt-20" : ""
+                project.flagship ? "md:col-span-2" : isOffset ? "md:pt-20" : ""
               }`}
             >
               {/* Meta Label Row */}
               <div className="flex items-center justify-between pb-3 text-xs uppercase tracking-wider text-white/50 border-b border-white/10 mb-4">
-                <span className="text-lime font-mono font-medium">0{idx + 1} / {project.client}</span>
+                <span className="text-lime font-mono font-medium">
+                  0{idx + 1} / {project.client}
+                  {project.flagship && <span className="ml-3 rounded-full bg-lime px-2 py-0.5 text-black">Flagship</span>}
+                </span>
                 <span>{project.year}</span>
               </div>
 
               {/* Media Display */}
               <div
                 data-fx="rise"
-                className="rounded-media relative aspect-[4/3] w-full bg-neutral-900"
+                className={`rounded-media relative w-full bg-neutral-900 ${project.flagship ? "aspect-[4/3] md:aspect-[21/9]" : "aspect-[4/3]"}`}
               >
                 {isReelOpen && project.reels[0] ? (
                   <div className="relative h-full w-full bg-black p-4 flex items-center justify-center">

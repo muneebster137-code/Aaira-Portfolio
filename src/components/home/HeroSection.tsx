@@ -13,9 +13,9 @@ import { media } from "@/data/media";
 const REEL = media.home.heroReel;
 
 /**
- * Home hero, kept deliberately quiet: one centred uppercase punchline whose only
- * image is the inline "monitor" pill, then an editorial footer row with the intro
- * on the left and a single call to action on the right.
+ * Home hero, kept deliberately quiet: one still full-bleed photo (darkened), a
+ * centred uppercase punchline with the inline "monitor" pill, then an editorial
+ * footer row with the intro on the left and a single call to action on the right.
  */
 export default function HeroSection() {
   const rootRef = useRef<HTMLElement>(null);
@@ -37,6 +37,7 @@ export default function HeroSection() {
       gsap.set("[data-hero-monitor]", { width: 0 });
       gsap.set("[data-hero-rule]", { scaleX: 0 });
       gsap.set("[data-hero-fade]", { autoAlpha: 0, y: 30 });
+      gsap.set("[data-hero-bg]", { scale: 1.12 });
     }, root);
 
     unsubscribe = onLoaderDone(() => {
@@ -44,7 +45,8 @@ export default function HeroSection() {
         // Final pill width lives in CSS (.hero-pill); animate to it, then hand back.
         const pillWidth = window.matchMedia("(min-width: 1024px)").matches ? "2.15em" : "1.6em";
         const tl = gsap.timeline({ delay: entranceDelay() });
-        tl.to("[data-hero-line]", { yPercent: 0, duration: 1.4, ease: "expo.out", stagger: 0.09 })
+        tl.to("[data-hero-bg]", { scale: 1, duration: 2.6, ease: "expo.out" }, 0)
+          .to("[data-hero-line]", { yPercent: 0, duration: 1.4, ease: "expo.out", stagger: 0.09 }, 0)
           .to("[data-hero-monitor]", { width: pillWidth, duration: 1.2, ease: "back.out(1.7)", clearProps: "width" }, 0.55)
           .to("[data-hero-rule]", { scaleX: 1, duration: 1.4, ease: "expo.inOut" }, 0.6)
           .to("[data-hero-fade]", { autoAlpha: 1, y: 0, duration: 1.2, ease: "expo.out", stagger: 0.08 }, 0.8);
@@ -69,6 +71,22 @@ export default function HeroSection() {
 
   return (
     <section ref={rootRef} className="theme-dark relative flex min-h-[100svh] flex-col overflow-hidden pt-28">
+      {/* One still background photo, darkened so the type always reads */}
+      <div data-hero-bg className="pointer-events-none absolute inset-0 will-change-transform" aria-hidden="true">
+        <Image
+          src={media.home.heroBackground}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
+      <div
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/85"
+        aria-hidden="true"
+      />
+
       <div className="gutter relative z-10 flex flex-1 flex-col">
         <div className="flex flex-1 items-center justify-center py-[6vh]">
           <h1
@@ -121,7 +139,7 @@ export default function HeroSection() {
 
         {/* Editorial footer row: intro on the left, one call to action on the right */}
         <div className="pb-[var(--gutter)]">
-          <div data-hero-rule className="h-px w-full origin-left bg-white/15" aria-hidden="true" />
+          <div data-hero-rule className="h-px w-full origin-left bg-white/25" aria-hidden="true" />
           <div className="flex flex-col gap-6 pt-6 md:flex-row md:items-end md:justify-between md:gap-12 md:pt-8">
             <p
               data-hero-fade
@@ -139,13 +157,10 @@ export default function HeroSection() {
                     e.preventDefault();
                     scrollTo("#selected-work");
                   }}
-                  className="group btn w-full justify-center md:w-auto"
+                  className="btn btn-thick w-full justify-center md:w-auto"
                 >
-                  <span className="roll">
-                    <span>See my work</span>
-                    <span>See my work</span>
-                  </span>
-                  <ArrowDownRight className="h-3.5 w-3.5" />
+                  See my work
+                  <ArrowDownRight className="h-[0.75em] w-[0.75em]" strokeWidth={2.5} />
                 </a>
               </Magnetic>
             </div>

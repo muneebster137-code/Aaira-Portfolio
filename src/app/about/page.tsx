@@ -26,16 +26,24 @@ const certifications = [
 
 const timeline = [
   {
-    year: "2026",
-    role: "Lead Visual Designer & Brand Architect",
-    company: "Manaaq Creatives Holding Group",
+    year: "2024 — Present",
+    role: "Creative Director",
+    company: "Manaaq Creative Studios",
     location: "Islamabad, PK",
     detail:
-      "Directing the overarching visual brand system for Manaaq and its three subsidiaries (Ellie Junior, Oopsies, NH Consultants). Governing brand books, cross-channel launch campaigns, and high-velocity social video suites. Completing BSc in Social Sciences (Psychology) at SZABIST Islamabad.",
+      "I lead the creative direction of Manaaq Creative Studios and its brands: Ellie Junior, Oopsies and NH Consultants. Brand books, cross-channel launch campaigns, packaging and social video, all under one creative direction.",
+  },
+  {
+    year: "2026",
+    role: "Graduated: BSc Social Sciences (Psychology)",
+    company: "SZABIST Islamabad",
+    location: "Islamabad, PK",
+    detail:
+      "Graduated with a degree in psychology, the foundation for how I design: for attention, trust and memory.",
   },
   {
     year: "2025",
-    role: "Creative Designer & Marketing Associate",
+    role: "Creative Director & Marketing Associate",
     company: "Buda Fashion Atelier",
     location: "Budapest, Hungary",
     detail:
@@ -51,7 +59,7 @@ const timeline = [
   },
   {
     year: "2024 — 2025",
-    role: "COO & Co-Founder",
+    role: "Co-Founder & Creative Director",
     company: "Anebos Studios",
     location: "Islamabad, PK",
     detail:
@@ -89,7 +97,7 @@ export default function AboutPage() {
 
             <div className="t-label text-white/50 space-y-1 text-left lg:text-right">
               <div>AAIRA BASIT · アイラ・バシット</div>
-              <div className="text-lime">CREATIVE DIRECTRESS · PSYCHOLOGY LEAD</div>
+              <div className="text-lime">CREATIVE DIRECTOR · TRAINED IN PSYCHOLOGY</div>
             </div>
           </div>
 
@@ -106,7 +114,7 @@ export default function AboutPage() {
                 src={media.about.portrait}
                 alt="Aaira Basit — Creative Director"
                 className="w-full h-full"
-                data-cursor-label="Directress"
+                data-cursor-label="Creative Director"
               />
               <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-black/85 backdrop-blur-md border border-white/10 flex items-center justify-between">
                 <div>
@@ -143,7 +151,7 @@ export default function AboutPage() {
 
             <div className="space-y-5 t-body text-white/70 font-light leading-relaxed">
               <p>
-                I do not operate as an isolated production designer ticking tickets. I step in as a creative directress who conceives, articulates, and protects entire brand universes — from foundational typography guidelines and color physics to high-velocity daily reels, packaging, exhibition architecture, and multi-brand holding governance.
+                I don&apos;t just push out assets from a ticket queue. I step in as a Creative Director who conceives, articulates and protects entire brand universes, from foundational typography guidelines and color physics to daily reels, packaging, exhibition design and multi-brand governance.
               </p>
               <p>
                 Because I studied psychology at SZABIST Islamabad, I ground every visual decision in cognitive heuristics: information hierarchy structured for instant retention, typographic balance establishing subconscious institutional authority, and deliberate contrast commanding human attention.
