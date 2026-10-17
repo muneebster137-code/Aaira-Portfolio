@@ -112,8 +112,12 @@ html.lenis body { height: auto; }
 }
 
 /* Size modifiers. The scale above is unlayered, so Tailwind text-* utilities can't override it. */
-.t-display.t-hero { font-size: clamp(2.25rem, 10vw, 11.5rem); }
-@media (min-width: 768px) { .t-display.t-hero { font-size: clamp(3.1rem, 9.4vw, 11.5rem); } }
+/* Below 1024px the hero headline stacks on four lines, so it can run big (capped by height for landscape phones) */
+.t-display.t-hero { font-size: clamp(2.25rem, min(18vw, 17svh), 10rem); }
+@media (min-width: 1024px) { .t-display.t-hero { font-size: clamp(3.1rem, 8vw, 10rem); } }
+/* Hero "monitor" pill: slimmer while stacked so the headline can stay large */
+.hero-pill { width: 1.6em; }
+@media (min-width: 1024px) { .hero-pill { width: 2.15em; } }
 /* Section headings sitting in a narrow column on desktop */
 @media (min-width: 1024px) { .t-section.t-narrow { font-size: clamp(2.75rem, 6.4vw, 8rem); } }
 

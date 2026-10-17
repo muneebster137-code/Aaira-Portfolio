@@ -160,14 +160,14 @@ export default function WorkArchivePage() {
                 {/* Title & Narrative */}
                 <div className="pt-6 flex flex-col gap-3">
                   <div className="flex items-baseline justify-between gap-4">
-                    <h2 className="t-row text-white hover:text-lime transition-colors duration-300">
+                    <h2 className="t-row min-w-0 text-white hover:text-lime transition-colors duration-300">
                       <Link href={`/work/${project.slug}`}>
                         {project.title}
                       </Link>
                     </h2>
                     <Link
                       href={`/work/${project.slug}`}
-                      className="text-white hover:text-lime transition-colors"
+                      className="shrink-0 text-white hover:text-lime transition-colors"
                       aria-label={`View ${project.title}`}
                     >
                       <ArrowUpRight className="w-6 h-6 stroke-[1.5]" />

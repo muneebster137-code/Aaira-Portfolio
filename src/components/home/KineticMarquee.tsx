@@ -16,7 +16,7 @@ export default function KineticMarquee() {
   ];
 
   return (
-    <div className="relative z-10 -my-4 overflow-x-clip py-10 select-none md:-my-6 md:py-14">
+    <div className="relative z-10 -my-4 overflow-hidden py-10 select-none md:-my-6 md:py-14">
       {/* Back band, tilted the other way */}
       <div className="absolute inset-x-[-5vw] top-1/2 h-12 -translate-y-1/2 rotate-[1.6deg] border-y border-white/15 bg-neutral-900 md:h-14" aria-hidden="true" />
       <div className="relative -mx-[5vw] -rotate-[1.6deg] bg-lime py-3 text-black md:py-4">
